@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* Planet */
+.planet {
+    font-size: 1.6rem;
+    font-family: Inter, sans-serif;
+    color: #cac8bc;
+    background: rgba(217, 217, 217, 0.26);
+    padding: 1.8rem;
+    border-radius: 2.2rem;
+    h1 {
+        font-weight: normal;
+        font-size: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.9rem;
+        img {
+            max-width: 12.6rem;
+        }
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+        list-style: none;
+        margin-top: 2.5rem;
+        img {
+            border-radius: 50%;
+        }
+    }
+    li {
+        margin-top: 1.9rem;
+    }
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template: repeat(2, auto) / 28.4rem 1fr;
+        gap: 7rem;
+        border-radius: 5.6rem;
+        h1 {
+            font-size: 3.6rem;
+            text-align: center;
+            display: block;
+            grid-row: 1 / -1;
+            margin-bottom: 0;
+            img {
+                display: block;
+                max-width: initial;
+            }
+        }
+        p {
+            font-size: 2.4rem;
+        }
+        ul,
+        li {
+            margin-top: 0;
+        }
+        ul {
+            flex-wrap: initial;
+            gap: .9rem;
+            img {
+                border-radius: initial;
+            }
+        }
+    }
+}
