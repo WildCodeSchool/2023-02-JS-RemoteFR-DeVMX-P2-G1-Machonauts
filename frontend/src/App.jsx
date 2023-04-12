@@ -1,14 +1,10 @@
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import Planet from "./components/Planet";
 
 import "./styles.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
-  );
+  return <Planet />;
 }
 
 export default App;
