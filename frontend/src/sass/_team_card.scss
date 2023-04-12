@@ -1,0 +1,44 @@
+.card-machaunaut-container{
+    background-color: rgba(212, 206, 206, 0.884);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+    width: 33rem;
+
+    .picture-profil-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img{
+            width: 20rem;
+            height: 20rem;
+        }
+        h1{
+            margin-top: -2rem;
+            font-size: 2.5rem;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+       
+    }
+    .caracteristique-infos-container{
+        display: flex;
+        justify-content: center;
+        p{
+            font-size: 1.5rem;
+            text-align: center;
+            width: 80%;
+        }
+    }
+    
+    @media screen and (min-width:774px) {
+        width: 30rem;
+    }
+    @media screen and (min-width:1024px) {
+        width: 25rem;
+    }
+
+  }
