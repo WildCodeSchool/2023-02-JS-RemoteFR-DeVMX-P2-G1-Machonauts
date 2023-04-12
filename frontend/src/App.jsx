@@ -1,11 +1,11 @@
-import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 import "./styles.scss";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Contact />
       <p>coucou</p>
     </div>
   );
