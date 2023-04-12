@@ -1,5 +1,6 @@
 import AboutUs from "./pages/AboutUs";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Planet from "./components/Planet";
 import "./styles.scss";
@@ -11,6 +12,7 @@ function App() {
       <Planet />
       <AboutUs />
       <Contact />
+      <Footer />
     </div>
   );
 }
