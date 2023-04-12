@@ -1,3 +1,5 @@
+import TeamCard from "../components/TeamCard";
+
 function AboutUs() {
   return (
     <div className="aboutUs-container-global">
@@ -5,7 +7,9 @@ function AboutUs() {
         <h1>Qui sommes nous</h1>
         <p>
           Nous sommes sommes une entrprise qui vous permettra de voyager dans
-          l'espace.
+          l'espace. Depuis plus de 10 ans nous explorons l'univers grace a nos
+          expert en astronomie. Notre base de donnée nous permet d'avoir des
+          informations confidentielles et protégées.
         </p>
       </div>
       <div className="mission-infos-container">
@@ -18,10 +22,10 @@ function AboutUs() {
       <div className="team-infos-container">
         <h1>Notre équipe</h1>
         <ul>
-          <li>Damien - Frontend Developer</li>
-          <li>Victor - Backend Developer</li>
-          <li>Jean-baptiste - Full Stack Developer</li>
-          <li>Nicolas - Full Stack Developer</li>
+          <TeamCard />
+          <TeamCard />
+          <TeamCard />
+          <TeamCard />
         </ul>
       </div>
     </div>

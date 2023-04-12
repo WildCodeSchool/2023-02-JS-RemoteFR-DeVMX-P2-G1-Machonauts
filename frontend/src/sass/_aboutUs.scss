@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    gap: 2rem;
     width: 100%;
 
     .entreprise-infos-container{
@@ -14,7 +13,6 @@
         align-items: center;
         padding: 2rem;
         width: 80%;
-        background-color: rgba(207, 201, 201, 0.795);
     }
 
     .mission-infos-container{
@@ -24,7 +22,6 @@
         align-items: center;
         padding: 2rem;
         width: 80%;
-        background-color: rgba(207, 201, 201, 0.795);
     }
 
     .team-infos-container{
@@ -34,14 +31,21 @@
         align-items: center;
         padding: 2rem;
         width: 80%;
-        background-color: rgba(207, 201, 201, 0.795);
     }
 
     h1{
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     p{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 2rem;
     }
 }
