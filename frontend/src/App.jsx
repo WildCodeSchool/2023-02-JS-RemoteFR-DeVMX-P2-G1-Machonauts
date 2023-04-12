@@ -1,3 +1,4 @@
+import AboutUs from "./pages/AboutUs";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import Planet from "./components/Planet";
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Planet />
+      <AboutUs />
       <Contact />
     </div>
   );
