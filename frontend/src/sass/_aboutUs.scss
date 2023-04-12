@@ -1,0 +1,47 @@
+.aboutUs-container-global{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+    width: 100%;
+
+    .entreprise-infos-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 80%;
+        background-color: rgba(207, 201, 201, 0.795);
+    }
+
+    .mission-infos-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 80%;
+        background-color: rgba(207, 201, 201, 0.795);
+    }
+
+    .team-infos-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 80%;
+        background-color: rgba(207, 201, 201, 0.795);
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+}

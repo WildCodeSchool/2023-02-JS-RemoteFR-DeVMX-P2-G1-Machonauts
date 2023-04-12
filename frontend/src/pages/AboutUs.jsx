@@ -9,14 +9,14 @@ function AboutUs() {
         </p>
       </div>
       <div className="mission-infos-container">
-        <h2>Our Mission</h2>
+        <h1>Our Mission</h1>
         <p>
           Notre mission est de vous apporter toutes les informations utiles pour
           pouvoir vous immerger dans cet univers .
         </p>
       </div>
       <div className="team-infos-container">
-        <h2>Notre équipe</h2>
+        <h1>Notre équipe</h1>
         <ul>
           <li>Damien - Frontend Developer</li>
           <li>Victor - Backend Developer</li>
