@@ -1,36 +1,18 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
 
-export default function Home() {
+
+function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
+    <div className='home'>
+      <img src="../assets/planets-surface/mercury.jpg" className='mercury' alt="Mercure"/>
+      <img src=".assets/planets-surface/venus.jpg" alt="Venus" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/earth.jpg" alt="Terre" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/mars.jpg" alt="Mars" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/jupiter.jpg" alt="Jupiter" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/saturn.jpg" alt="Saturne" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/uranus.jpg" alt="Uranus" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/neptune.jpg" alt="Neptune" style={{ width: '400px', }}/>
+      <img src=".assets/planets-surface/saturn_ring.png" alt="Anneaux de Saturne" style={{ width: '400px', }}/>
+    </div>
+)}
 
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
-  );
-}
+export default Home;
