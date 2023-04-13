@@ -94,7 +94,6 @@
 
 
 #root {
-	height: 100vh;
-	background: url("./assets/background.jpg") no-repeat center /
-		cover;
+	min-height: 100vh;
+	background: black url("./assets/8k_stars.jpg") no-repeat fixed center / cover;
 }
