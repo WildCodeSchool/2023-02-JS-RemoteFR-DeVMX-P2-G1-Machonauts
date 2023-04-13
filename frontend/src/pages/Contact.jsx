@@ -8,7 +8,7 @@ function Contact() {
   return (
     <div className="contact-page">
       <form className="contact-form">
-        <h1>Contact Us</h1>
+        <h1 className="h1-Contact">Contact Us</h1>
         <label>
           <input
             className="input"
