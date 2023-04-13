@@ -1,10 +1,11 @@
 .card-machaunaut-container{
-    background-color: rgba(212, 206, 206, 0.884);
+    background: rgba(217, 217, 217, 0.06);
+    box-shadow: 0px 4px 48px 8px rgba(94, 242, 242, 0.4), inset 0px 4px 73px 4px rgba(94, 242, 242, 0.25);
+    border-radius: 56px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40rem;
-    width: 33rem;
+    width: 30rem;
 
     .picture-profil-container{
         display: flex;
@@ -30,15 +31,15 @@
         p{
             font-size: 1.5rem;
             text-align: center;
-            width: 80%;
+            width: 90%;
         }
     }
     
-    @media screen and (min-width:774px) {
-        width: 30rem;
-    }
-    @media screen and (min-width:1024px) {
-        width: 25rem;
-    }
+    // @media screen and (min-width:774px) {
+    //     width: 30rem;
+    // }
+    // @media screen and (min-width:1024px) {
+    //     width: 25rem;
+    // }
 
   }
