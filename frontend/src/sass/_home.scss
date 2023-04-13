@@ -1,0 +1,100 @@
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-direction: column;
+    height: 100vh;
+
+        .mercury{
+            border-radius: 10rem;
+            height: 10rem;
+        }
+        .venus{
+            width: 100px;
+            height: 10rem;
+        }
+        .earth{
+            width: 100px;
+            height: 10rem;
+        }
+        .mars{
+            width: 100px;
+            height: 10rem;
+        }
+        .jupiter{
+            width: 100px;
+            height: 10rem;
+        }
+        .saturne{
+            width: 100px;
+            height: 10rem;
+        }
+        .uranus{
+            width: 100px;
+            height: 10rem;
+        }
+        .neptune{
+            width: 100px;
+            height: 10rem;
+        }
+        /*.saturnring {
+            height: 10rem;
+        }*/
+        @media (min-width: 600px){     
+            display: flex;
+            justify-content: space-around;
+            align-items: center; 
+            flex-direction: row;
+            height: 100vh; 
+                  
+                .mercury{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .venus{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .earth{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .mars{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .jupiter{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .saturne{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .uranus{
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                .neptune{
+    
+                    border-radius: 10rem;
+                    height: 10rem;
+                }
+                /*.saturnring {
+                    height: 10rem;
+                }*/
+            
+    }      
+}
+
+
+
+
+
+
+
+#root {
+	height: 100vh;
+	background: url("./assets/background.jpg") no-repeat center /
+		cover;
+}
