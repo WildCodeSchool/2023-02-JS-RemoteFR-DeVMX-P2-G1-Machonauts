@@ -1,6 +1,6 @@
 function Planet() {
   return (
-    <article className="planet">
+    <article className="planet earth">
       <h1>
         <img src="./src/assets/earth.png" alt="" /> Terre
       </h1>
