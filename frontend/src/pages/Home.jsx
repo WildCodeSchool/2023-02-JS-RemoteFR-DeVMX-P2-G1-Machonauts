@@ -15,7 +15,7 @@ function Home() {
           alt="Venus"
         />
       </a>
-      <a href="earth">
+      <a href="/pages/Planet">
         <img
           src="../src/assets/planets-surface/earth.jpg"
           className="earth"
