@@ -11,18 +11,22 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        height: 100vh;
-        width: 100vw;
+        height: 90vh;
+        width: 90vw;
         background: rgba(217, 217, 217, 0.045);
         box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
         border-radius: 56px;
 
         .input {
-            height: 1.5rem;
+            height: 5rem;
             width: 30rem;
             background-color: #d9d9d948;
             border-color: none;
             border-radius : 1rem;
+            border:0;
+            color: #d9d9d9;
+            padding-left : 1rem;
+            font-size:1.7rem ;
             &::placeholder {
                 color: #d9d9d9;
                 padding-left : 1rem;
@@ -34,16 +38,22 @@
             width: 30rem;
             background-color: #d9d9d948;
             border-radius : 1rem;
+            border:0;
+            color: #d9d9d9;
+            padding-left : 1rem;
+            padding-top: 1rem;
+            font-size:1.7rem ;
             &::placeholder{
                 color: #d9d9d9;
                 padding-left : 1rem;
                 padding-top: 1rem;
 
             }
+            
         }
 
         h1 {
-            font-size: rem;
+            font-size: 3.5rem;
             color: #d9d9d9;
         }
 
@@ -51,20 +61,29 @@
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             border: #d9d9d9 solid 1.5px;
-            width: 10rem;
-            height: 2rem;
+            width: 25rem;
+            height: 3.5rem;
             transition-duration: all 0.4s;
             color: #d9d9d9;
+            font-size:1.7rem ;
             border-radius : 1rem;
+            border:0;
+            background-color: #d9d9d948;
+            &:hover {
+                background: linear-gradient(188deg, #350278, #1b038e);
+                color: white;
+            }
         }
     }
 
     @media screen and (min-width: 650px) {
         .contact-form {
             height: 80vh;
-            width: 60vw;
+            width: 85vw;
+            max-width : 1000px; 
 
             .buttonContact {
+                font-size: 1.7rem;
                 &:hover {
                     background: linear-gradient(188deg, #350278, #1b038e);
                     color: white;
@@ -75,8 +94,9 @@
             .input {
                 height: 5rem;
                 width: 50rem;
+                font-size: 1.7rem;
                 &::placeholder{
-                    font-size: 1.3rem;
+                    font-size: 1.7rem;
                 }
 
             }
@@ -84,8 +104,9 @@
             .textaera {
                 height: 20rem;
                 width: 50rem;
+                font-size: 1.7rem;
                 &::placeholder{
-                    font-size: 1.3rem;
+                    font-size: 1.7rem;
                 }
             }
 
@@ -98,6 +119,31 @@
             }
 
 
+        }
+    }
+    @media screen and (min-width: 950px) {
+        .contact-form {
+            height: 80vh;
+            width: 80vw;
+
+            .input {
+                height: 5rem;
+                width: 60rem;
+                font-size: 1.7rem;
+                &::placeholder{
+                    font-size: 1.7rem;
+                }
+
+            }
+
+            .textaera {
+                height: 20rem;
+                width: 60rem;
+                font-size: 1.7rem;
+                &::placeholder{
+                    font-size: 1.7rem;
+                }
+            }
         }
     }
 }
