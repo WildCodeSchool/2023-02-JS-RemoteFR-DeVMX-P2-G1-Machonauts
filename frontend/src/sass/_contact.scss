@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    padding-bottom: 4rem;
 
     .contact-form {
         display: flex;
@@ -16,6 +17,7 @@
         background: rgba(217, 217, 217, 0.045);
         box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
         border-radius: 56px;
+        
 
         .input {
             height: 5rem;

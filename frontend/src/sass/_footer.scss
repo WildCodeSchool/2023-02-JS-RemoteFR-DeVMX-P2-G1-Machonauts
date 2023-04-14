@@ -1,5 +1,4 @@
 .footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     color: white;
@@ -17,4 +16,10 @@
        
     }
 
+}
+
+@media screen and (min-width : 600px) {
+    .footer {
+    position: fixed;
+}
 }
