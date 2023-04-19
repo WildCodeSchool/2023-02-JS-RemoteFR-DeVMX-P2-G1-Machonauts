@@ -6,7 +6,10 @@ function TeamCard({ profil }) {
     <div className="card-machaunaut-container">
       <div className="picture-profil-container">
         <img src={imgProfil} alt="" />
-        <h2>{profil.firstName}</h2>
+        <h2>
+          {`${profil.firstName}    
+          ${profil.lastName}`}
+        </h2>
         <h3>{profil.title}</h3>
       </div>
       <div className="caracteristique-infos-container">
