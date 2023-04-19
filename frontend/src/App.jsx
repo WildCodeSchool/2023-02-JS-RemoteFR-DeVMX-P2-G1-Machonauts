@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Planet from "./pages/Planet";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Planet from "./components/Planet";
 import "./styles.scss";
 
 function App() {
