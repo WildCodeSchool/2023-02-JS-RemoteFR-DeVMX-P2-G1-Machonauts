@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Rockets from "./pages/Rockets";
 import "./styles.scss";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/pages/Home" element={<Home />} />
           <Route path="/pages/Planet/:planet" element={<Planet />} />
+          <Route path="/pages/rockets" element={<Rockets />} />
           <Route path="/pages/AboutUs" element={<AboutUs />} />
           <Route path="/pages/Contact" element={<Contact />} />
         </Routes>
