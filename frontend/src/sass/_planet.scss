@@ -13,8 +13,8 @@ $planet-colours: (
     neptune: (rgba(74, 139, 223, 0.25), rgba(74, 139, 223, 0.35)),
 );
 .planet {
-    font-size: 1.6rem;
-    color: #cac8bc;
+    font-size: var(--paragraph-size);
+    color: var(--primary-colour);
     background: rgba(217, 217, 217, 0.06);
     padding: 1.8rem;
     margin: 1.2rem;
@@ -34,7 +34,10 @@ $planet-colours: (
         align-items: center;
         margin-bottom: 1.9rem;
         img {
-            max-width: 12.6rem;
+            width: 126px;
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1;
         }
     }
     ul {
@@ -52,6 +55,8 @@ $planet-colours: (
         margin-top: 1.9rem;
     }
     @media (min-width: 600px) {
+        --title-size: 3.6rem;
+        --paragraph-size: 2.4rem;
         display: grid;
         grid-template: repeat(2, auto) / 28.4rem 1fr;
         gap: 7rem;
@@ -65,18 +70,18 @@ $planet-colours: (
             }
         }
         h1 {
-            font-size: 3.6rem;
+            font-size: var(--title-size);
             text-align: center;
             display: block;
             grid-row: 1 / -1;
             margin-bottom: 0;
             img {
                 display: block;
-                max-width: initial;
+                width: 330px;
             }
         }
         p {
-            font-size: 2.4rem;
+            font-size: var(--paragraph-size);
         }
         ul,
         li {
