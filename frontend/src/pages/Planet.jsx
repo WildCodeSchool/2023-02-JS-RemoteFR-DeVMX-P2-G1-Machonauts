@@ -142,7 +142,7 @@ function Planet() {
             .map((anotherPlanet) => {
               return (
                 <li key={anotherPlanet}>
-                  <Link to={`/pages/Planet/${anotherPlanet}`}>
+                  <Link to={`/planet/${anotherPlanet}`}>
                     {planets[anotherPlanet].name}
                   </Link>
                 </li>

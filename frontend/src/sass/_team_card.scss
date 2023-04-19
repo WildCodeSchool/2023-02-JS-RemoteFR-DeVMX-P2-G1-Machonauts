@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 1.5rem;
         
         img{
             width: 20rem;
@@ -23,16 +24,22 @@
         h3{
             font-size: 1.7rem;
         }
+        @media screen and (min-width:800px) {
+            h2{
+                font-size: 3rem;
+            }
+        }
        
     }
     .caracteristique-infos-container{
         display: flex;
         justify-content: center;
         p{
-            font-size: 1.5rem;
+            font-size: var(-paragraph-size);
             text-align: center;
             width: 85%;
         }
+    
     }
     .icons-container{
         height: 5rem;
@@ -41,19 +48,33 @@
         align-items: center;
         gap: 3rem;
         justify-content: center;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
 
         a{
         color: inherit;
-
             i{
                 font-size: 3rem;
                     }
                     i:hover{
                         color: aqua;
                     }
+                    @media screen and (min-width:800px) {
+                        i{
+                            font-size: 4.5rem;
+                        }
+                    }
         }
+       
    
+    }
+    @media screen and (min-width:800px) {
+        width: 40rem;
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: var(--paragraph-size-desktop);
+        }
     }
     
   }
