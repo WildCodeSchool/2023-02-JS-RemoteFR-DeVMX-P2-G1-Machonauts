@@ -38,9 +38,9 @@ function Home() {
           alt="Jupiter"
         />
       </Link>
-      <Link to="/planet/saturne">
+      <Link to="/planet/saturn">
         <img
-          src="../src/assets/planets-surface/saturne.jpg"
+          src="../src/assets/planets-surface/saturn.jpg"
           className="saturne"
           alt="Saturne"
         />

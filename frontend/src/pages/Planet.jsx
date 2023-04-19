@@ -4,9 +4,25 @@ import planets from "../datas/planets";
 
 function Planet() {
   const { planet } = useParams();
+  const displayNumber = (number) => {
+    return number.toLocaleString("fr-FR");
+  };
+  const isNegativeNumber = (number) => {
+    return number < 0;
+  };
+  const getAuFromKm = (number) => {
+    return (number / 149597870.7).toFixed(3);
+  };
+  const getCelsiusFromKelvin = (number) => {
+    return Math.round(number - 273.15);
+  };
   const planetName = planets[planet].name;
+  const planetDescription = planets[planet].description;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
+  const [characteristics, setCharacteristics] = useState({});
   const [images, setImages] = useState([]);
+  const currentPlanetUCFirst =
+    currentPlanet[0].toUpperCase() + currentPlanet.slice(1);
   if (currentPlanet !== planet) setCurrentPlanet(planet);
   useEffect(() => {
     if (images) setImages([]);
@@ -26,6 +42,11 @@ function Planet() {
         )
       )
       .catch((error) => console.error(error));
+    fetch(
+      `https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,eq,${currentPlanetUCFirst}`
+    )
+      .then((response) => response.json())
+      .then((data) => setCharacteristics(data.bodies[0]));
   }, [currentPlanet]);
 
   return (
@@ -35,17 +56,100 @@ function Planet() {
         {}
         {planetName}
       </h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        sed egestas dui. Ut sit amet lectus varius, dignissim eros non, viverra
-        tellus. Nullam vitae consectetur nisi. Cras elementum, metus quis
-        iaculis dapibus, massa odio molestie risus, condimentum pellentesque mi
-        augue eget libero. Phasellus sagittis nec justo eu lacinia. Quisque
-        maximus ipsum metus, porttitor sollicitudin justo accumsan sagittis.
-        Vivamus quis rutrum metus. Ut sed euismod ante. Phasellus eros erat,
-        hendrerit quis elit lobortis, gravida semper nunc. Praesent libero mi,
-        accumsan a interdum non, ornare non risus.
-      </p>
+      <p>{planetDescription}</p>
+      {Object.keys(characteristics).length && (
+        <>
+          <section>
+            <h2>Caractéristiques orbitales</h2>
+            <dl>
+              <dt>Demi-grand axe</dt>
+              <dd>
+                {displayNumber(characteristics.semimajorAxis)}&nbsp;km{" "}
+                <span>
+                  ({getAuFromKm(characteristics.semimajorAxis)}&nbsp;au)
+                </span>
+              </dd>
+              <dt>Aphélie</dt>
+              <dd>
+                {displayNumber(characteristics.aphelion)}&nbsp;km{" "}
+                <span>({getAuFromKm(characteristics.aphelion)}&nbsp;au)</span>
+              </dd>
+              <dt>Périhélie</dt>
+              <dd>
+                {displayNumber(characteristics.perihelion)}&nbsp;km{" "}
+                <span>({getAuFromKm(characteristics.perihelion)}&nbsp;au)</span>
+              </dd>
+              <dt>Excentricité</dt>
+              <dd>{displayNumber(characteristics.eccentricity)}</dd>
+              <dt>Période de révolution</dt>
+              <dd>{displayNumber(characteristics.sideralOrbit)} jours</dd>
+              <dt>Inclinaison sur l’écliptique</dt>
+              <dd>{displayNumber(characteristics.inclination)}°</dd>
+              <dt>Nœud ascendant</dt>
+              <dd>{displayNumber(characteristics.longAscNode)}°</dd>
+              <dt>Satellites connus</dt>
+              <dd>
+                {characteristics.moons ? characteristics.moons.length : 0}
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Caractéristiques physiques</h2>
+            <dl>
+              <dt>Rayon équatorial</dt>
+              <dd>{displayNumber(characteristics.equaRadius)}&nbsp;km</dd>
+              <dt>Rayon polaire</dt>
+              <dd>{displayNumber(characteristics.polarRadius)}&nbsp;km</dd>
+              <dt>Rayon moyen volumétrique</dt>
+              <dd>{displayNumber(characteristics.meanRadius)}&nbsp;km</dd>
+              <dt>Aplatissement</dt>
+              <dd>{displayNumber(characteristics.flattening)}</dd>
+              <dt>Volume</dt>
+              <dd>
+                {displayNumber(characteristics.vol.volValue)} × 10
+                <sup>{displayNumber(characteristics.vol.volExponent)}</sup>
+                &nbsp;km<sup>3</sup>
+              </dd>
+              <dt>Masse</dt>
+              <dd>
+                {displayNumber(characteristics.mass.massValue)} × 10
+                <sup>{displayNumber(characteristics.mass.massExponent)}</sup>
+                &nbsp;kg
+              </dd>
+              <dt>Masse volumique globale</dt>
+              <dd>
+                {displayNumber(characteristics.density)}&nbsp;t/m<sup>3</sup>
+              </dd>
+              <dt>Gravité de surface</dt>
+              <dd>
+                {displayNumber(characteristics.gravity)}&nbsp;m/s<sup>2</sup>
+              </dd>
+              <dt>Vitesse de libération</dt>
+              <dd>{displayNumber(characteristics.escape)}&nbsp;m/s</dd>
+              <dt>
+                Période de rotation <span>(jour sidéral)</span>
+              </dt>
+              <dd>
+                {displayNumber(characteristics.sideralRotation)}&nbsp;h
+                {isNegativeNumber(characteristics.sideralRotation) && (
+                  <span>(rétrograde)</span>
+                )}
+              </dd>
+              <dt>Inclinaison de l’axe</dt>
+              <dd>{displayNumber(characteristics.axialTilt)}°</dd>
+              <dt>
+                Température de surface <span>(à 100&nbsp;kPa)</span>
+              </dt>
+              <dd>
+                {displayNumber(characteristics.avgTemp)}&nbsp;K{" "}
+                <span>
+                  ({getCelsiusFromKelvin(characteristics.avgTemp)}&nbsp;°C)
+                </span>
+              </dd>
+            </dl>
+          </section>
+        </>
+      )}
       {images && (
         <ul>
           {images.map((image) => {
