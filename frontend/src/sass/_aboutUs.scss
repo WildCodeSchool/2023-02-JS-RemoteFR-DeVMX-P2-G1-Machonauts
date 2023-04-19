@@ -22,9 +22,6 @@
         max-width: 100rem;
         padding: 2rem;
 
-        h1{
-         
-        }
     }
 
      .team-infos-container{
@@ -47,6 +44,16 @@
         justify-content: center;
         gap: 5rem;
         padding-top: 2rem;
+    }
+    @media screen and (min-width:800px) {
+              p{
+            font-size: var(--paragraph-size-desktop);
+        }
+    }    
+    @media screen and (min-width:800px) {
+        h1{
+            font-size: 5rem;
+        }
     }
 
 }
