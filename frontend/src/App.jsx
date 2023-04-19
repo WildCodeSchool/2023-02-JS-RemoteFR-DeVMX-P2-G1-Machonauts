@@ -10,16 +10,16 @@ import "./styles.scss";
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/pages/Home" element={<Home />} />
           <Route path="/pages/Planet/:planet" element={<Planet />} />
           <Route path="/pages/AboutUs" element={<AboutUs />} />
           <Route path="/pages/Contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
