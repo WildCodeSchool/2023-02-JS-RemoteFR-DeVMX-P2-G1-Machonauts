@@ -1,6 +1,9 @@
+import { useParams } from "react-router-dom";
+
 function Planet() {
+  const { planet } = useParams();
   return (
-    <article className="planet earth">
+    <article className={`planet ${planet}`}>
       <h1>
         <img src="/src/assets/earth.png" alt="" /> Terre
       </h1>
