@@ -143,7 +143,7 @@
                 }
 
                 img {
-                    --s: 50px;   /* the size of the image */
+                    --s: 30px;   /* the size of the image */
                     --b: 0px;     /* the border thickness*/
                     --g: 12px;    /* the gap */
                     --c: #4ECDC4; /* the color */
@@ -153,7 +153,7 @@
                     outline: calc(var(--s)/2) solid #0009;
                     outline-offset: calc(var(--s)/-2);
                     cursor: pointer;
-                    transition: 3s;
+                    transition: 6s;
                   }
                   img:hover {
                     outline: var(--b) solid var(--c);
