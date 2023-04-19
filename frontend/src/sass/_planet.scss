@@ -57,11 +57,27 @@ $planet-colours: (
     li {
         margin-top: 1.9rem;
     }
+    .other-planets {
+        ul {
+            gap: 1rem;
+        }
+        li {
+            margin-top: 0;
+        }
+        a {
+            color: inherit;
+            transition: color 125ms ease-in;
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+    }
     @media (min-width: 800px) {
         --title-size: 3.6rem;
         --paragraph-size: 2.4rem;
         display: grid;
-        grid-template: repeat(2, auto) / 28.4rem 1fr;
+        grid-template: repeat(3, auto) / 28.4rem 1fr;
         gap: 7rem;
         padding: 10.4rem 8.5rem;
         margin: 4.7rem;
@@ -76,7 +92,7 @@ $planet-colours: (
             font-size: var(--title-size);
             text-align: center;
             display: block;
-            grid-row: 1 / -1;
+            grid-row: span 2;
             margin-bottom: 0;
             img {
                 display: block;
@@ -95,6 +111,9 @@ $planet-colours: (
             img {
                 border-radius: initial;
             }
+        }
+        .other-planets {
+            grid-column: 1 / -1;
         }
     }
 }
