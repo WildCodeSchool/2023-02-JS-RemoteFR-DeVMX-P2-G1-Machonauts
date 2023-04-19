@@ -1,10 +1,10 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer">
-      <a href="/pages/AboutUs"> About Us </a>
-      <a href="/pages/Contact"> Contact Us </a>
+      <Link to="../pages/AboutUs"> About Us </Link>
+      <Link to="../pages/Contact"> Contact Us </Link>
     </footer>
   );
 }
