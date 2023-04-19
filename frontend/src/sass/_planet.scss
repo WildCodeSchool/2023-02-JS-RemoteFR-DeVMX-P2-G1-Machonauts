@@ -26,7 +26,7 @@ $planet-colours: (
         }
     }
     section {
-        margin-top: 1rem;
+        margin-top: 3rem;
     }
     h1,
     h2 {
@@ -65,14 +65,8 @@ $planet-colours: (
     }
     dl {
         display: grid;
-        grid-template: repeat(2, auto) / repeat(2, max-content);
-        gap: 1rem;
-    }
-    dt,
-    dd {
-        span {
-            display: block;
-        }
+        grid-template: repeat(2, auto) / repeat(2, 1fr);
+        gap: 0 1rem;
     }
     dd {
         text-align: end;
@@ -107,6 +101,10 @@ $planet-colours: (
                 box-shadow: 1px 1px 53px 21px #{list.nth($colours, 1)}, inset 0px 4px 78px 2px #{list.nth($colours, 2)};
             }
         }
+        section,
+        ul {
+            grid-column: 1 / -1;
+        }
         h1,
         h2 {
             font-size: var(--title-size-desktop);
@@ -114,7 +112,6 @@ $planet-colours: (
         h1 {
             text-align: center;
             display: block;
-            grid-row: 1 / -1;
             margin-bottom: 0;
             img {
                 display: block;
@@ -131,8 +128,33 @@ $planet-colours: (
                 border-radius: initial;
             }
         }
+        dl {
+            grid-template-columns: repeat(2, max-content);
+            column-gap: 3rem; 
+        }
+        dt,
+        dd {
+            span {
+                display: block;
+            }
+        }
         .other-planets {
             grid-column: 1 / -1;
+        }
+    }
+    @media (min-width: 1000px) {
+        section {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        dt,
+        dd {
+            span {
+                display: initial;
+            }
         }
     }
 }
