@@ -1,5 +1,5 @@
-import logo from "../assets/logo-spacemx1.svg";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo-spacemx1.svg";
 
 function Header() {
   return (
