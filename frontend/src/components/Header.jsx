@@ -1,12 +1,13 @@
 import logo from "../assets/logo-spacemx1.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <div className="header-container">
-        <a href="/pages/Home">
+        <Link to="../pages/Home">
           <img src={logo} alt="logo" />
-        </a>
+        </Link>
       </div>
     </header>
   );
