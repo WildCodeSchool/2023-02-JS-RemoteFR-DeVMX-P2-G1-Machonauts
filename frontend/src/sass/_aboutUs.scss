@@ -3,78 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 4rem ;
     padding-bottom: 4rem;
-    width: 100%;
-    color: white;
-
-    // .container-total{
-    //     height: 50rem;
-    // }
-
-    .effect-container-infos{
-        margin: 0 auto;
-        perspective: 30rem;
-        perspective-origin: bottom;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        // height:20rem;
-        overflow: visible;
-        transform: scaleY(0.9);
-    
-        @keyframes play {
-            0% {
-                transform: rotateX(21deg) translate3d(0, 10rem, 0);
-                opacity: 1;
-            }
-            85% {
-                opacity: 1;
-            }
-            100% {
-                transform: rotateX(21deg) translate3d(0, -10rem, 0);
-            }
-        }
-
-            .entreprise-infos-container{
-                // animation: play 10s infinite;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 2rem;
-                width: 90%;
-                
-                h1{
-                    font-size: 3.5rem;
-                    margin-bottom: 2rem;
-                }
-                
-                p{
-                    font-size: 1.5rem;
-                }
-            }
-        }
-
-    .mission-infos-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        width: 80%;
-    }
-
-    .team-infos-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        width: 80%;
-    }
+      color: white;
 
     h1{
         font-size: 3.5rem;
@@ -85,7 +16,22 @@
         font-size: 1.5rem;
         text-align: center;
     }
-    ul{
+
+    .entreprise-infos-container{
+        width: 80%;
+    }
+     .team-infos-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+    }
+
+  
+    .team-cards-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

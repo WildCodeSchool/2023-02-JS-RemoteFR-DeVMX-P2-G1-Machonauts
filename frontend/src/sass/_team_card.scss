@@ -34,12 +34,25 @@
             width: 90%;
         }
     }
-    
-    // @media screen and (min-width:774px) {
-    //     width: 30rem;
-    // }
-    // @media screen and (min-width:1024px) {
-    //     width: 25rem;
-    // }
+    .icons-container{
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        justify-content: center;
 
+        a{
+        color: inherit;
+
+            i{
+                font-size: 3rem;
+                    }
+                    i:hover{
+                        color: aqua;
+                    }
+        }
+   
+    }
+    
   }
