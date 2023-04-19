@@ -25,9 +25,15 @@ $planet-colours: (
             box-shadow: 0 4px 53px 21px #{list.nth($colours, 1)}, inset 0 4px 78px 2px #{list.nth($colours, 2)};
         }
     }
-    h1 {
-        font-weight: normal;
+    section {
+        margin-top: 1rem;
+    }
+    h1,
+    h2 {
         font-size: var(--title-size);
+        font-weight: normal;
+    }
+    h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -57,6 +63,20 @@ $planet-colours: (
     li {
         margin-top: 1.9rem;
     }
+    dl {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, max-content);
+        gap: 1rem;
+    }
+    dt,
+    dd {
+        span {
+            display: block;
+        }
+    }
+    dd {
+        text-align: end;
+    }
     .other-planets {
         ul {
             gap: 1rem;
@@ -76,7 +96,7 @@ $planet-colours: (
     @media (min-width: 800px) {
         font-size: var(--paragraph-size-desktop);
         display: grid;
-        grid-template: repeat(3, auto) / 28.4rem 1fr;
+        grid-template: repeat(5, auto) / 28.4rem 1fr;
         gap: 7rem;
         padding: 10.4rem 8.5rem;
         margin: 4.7rem;
@@ -87,11 +107,14 @@ $planet-colours: (
                 box-shadow: 1px 1px 53px 21px #{list.nth($colours, 1)}, inset 0px 4px 78px 2px #{list.nth($colours, 2)};
             }
         }
-        h1 {
+        h1,
+        h2 {
             font-size: var(--title-size-desktop);
+        }
+        h1 {
             text-align: center;
             display: block;
-            grid-row: span 2;
+            grid-row: 1 / -1;
             margin-bottom: 0;
             img {
                 display: block;
