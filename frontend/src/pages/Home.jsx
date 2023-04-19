@@ -7,6 +7,7 @@ function Home() {
           className="mercury"
           alt="Mercure"
         />
+        <p>Mercure</p>
       </a>
       <a href="venus">
         <img
@@ -14,6 +15,7 @@ function Home() {
           className="venus"
           alt="Venus"
         />
+        <p>Venus</p>
       </a>
       <a href="/pages/Planet">
         <img
@@ -21,6 +23,7 @@ function Home() {
           className="earth"
           alt="Terre"
         />
+        <p>Terre</p>
       </a>
       <a href="mars">
         <img
@@ -28,6 +31,7 @@ function Home() {
           className="mars"
           alt="Mars"
         />
+        <p>Mars</p>
       </a>
       <a href="jupiter">
         <img
@@ -35,6 +39,7 @@ function Home() {
           className="jupiter"
           alt="Jupiter"
         />
+        <p>Jupiter</p>
       </a>
       <a href="saturne">
         <img
@@ -42,6 +47,7 @@ function Home() {
           className="saturne"
           alt="Saturne"
         />
+        <p>Saturne</p>
       </a>
       <a href="uranus">
         <img
@@ -49,6 +55,7 @@ function Home() {
           className="uranus"
           alt="Uranus"
         />
+        <p>Uranus</p>
       </a>
       <a href="neptune">
         <img
@@ -56,6 +63,7 @@ function Home() {
           className="neptune"
           alt="Neptune"
         />
+        <p>Neptune</p>
       </a>
     </div>
   );
