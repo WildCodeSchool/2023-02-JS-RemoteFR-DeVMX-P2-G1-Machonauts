@@ -4,11 +4,12 @@ import planets from "../datas/planets";
 function Planet() {
   const { planet } = useParams();
   const planetName = planets[planet].name;
-  console.info(planets);
   return (
     <article className={`planet ${planet}`}>
       <h1>
-        <img src="/src/assets/earth.png" alt="" /> {planetName}
+        <img src={`/src/assets/planets-surface/${planet}.jpg`} alt="" />
+        {}
+        {planetName}
       </h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
