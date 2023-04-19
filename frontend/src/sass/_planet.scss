@@ -27,7 +27,7 @@ $planet-colours: (
     }
     h1 {
         font-weight: normal;
-        font-size: inherit;
+        font-size: var(--title-size);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -74,8 +74,7 @@ $planet-colours: (
         }
     }
     @media (min-width: 800px) {
-        --title-size: 3.6rem;
-        --paragraph-size: 2.4rem;
+        font-size: var(--paragraph-size-desktop);
         display: grid;
         grid-template: repeat(3, auto) / 28.4rem 1fr;
         gap: 7rem;
@@ -89,7 +88,7 @@ $planet-colours: (
             }
         }
         h1 {
-            font-size: var(--title-size);
+            font-size: var(--title-size-desktop);
             text-align: center;
             display: block;
             grid-row: span 2;
@@ -98,9 +97,6 @@ $planet-colours: (
                 display: block;
                 width: 330px;
             }
-        }
-        p {
-            font-size: var(--paragraph-size);
         }
         ul,
         li {
