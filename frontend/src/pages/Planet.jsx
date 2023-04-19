@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import planets from "../datas/planets";
 
 function Planet() {
@@ -54,6 +54,21 @@ function Planet() {
           })}
         </ul>
       )}
+      <nav className="other-planets">
+        <ul>
+          {Object.keys(planets)
+            .filter((item) => item !== planet)
+            .map((anotherPlanet) => {
+              return (
+                <li key={anotherPlanet}>
+                  <Link to={`/pages/Planet/${anotherPlanet}`}>
+                    {planets[anotherPlanet].name}
+                  </Link>
+                </li>
+              );
+            })}
+        </ul>
+      </nav>
     </article>
   );
 }
