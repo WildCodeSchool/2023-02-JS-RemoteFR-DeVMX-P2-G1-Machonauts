@@ -1,0 +1,225 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding-bottom: 4rem;
+
+    .contact-form {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        height: 90vh;
+        width: 90vw;
+        background: rgba(217, 217, 217, 0.045);
+        box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
+        border-radius: 56px;
+
+
+        .send-form-off {
+            display: none;
+
+        }
+
+        .send-form-on {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            // background-image: image de lune ? ;
+            position: absolute;
+            height: 60vh;
+            width: 75vw;
+            color: #190101;
+            font-size: 1.7rem;
+            background: rgba(217, 217, 217, 0.954);
+            box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
+            border-radius: 56px;
+
+            .buttonSend {
+                border: none;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border: #d9d9d9 solid 1.5px;
+                width: 25rem;
+                height: 3.5rem;
+                transition-duration: all 0.4s;
+                color: #d9d9d9;
+                font-size: 1.7rem;
+                border-radius: 1rem;
+                border: 0;
+                color: #190101;
+
+            }
+        }
+
+        .input {
+            height: 5rem;
+            width: 30rem;
+            background-color: #d9d9d948;
+            border-color: none;
+            border-radius: 1rem;
+            border: 0;
+            color: #d9d9d9;
+            padding-left: 1rem;
+            font-size: 1.7rem;
+
+            &::placeholder {
+                color: #d9d9d9;
+                padding-left: 1rem;
+            }
+        }
+
+        .textaera {
+            height: 20rem;
+            width: 30rem;
+            background-color: #d9d9d948;
+            border-radius: 1rem;
+            border: 0;
+            color: #d9d9d9;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            font-size: 1.7rem;
+
+            &::placeholder {
+                color: #d9d9d9;
+                padding-left: 1rem;
+                padding-top: 1rem;
+
+            }
+
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #d9d9d9;
+        }
+
+        .buttonContact {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: #d9d9d9 solid 1.5px;
+            width: 25rem;
+            height: 3.5rem;
+            transition-duration: all 0.4s;
+            color: #d9d9d9;
+            font-size: 1.7rem;
+            border-radius: 1rem;
+            border: 0;
+            background-color: #d9d9d948;
+
+            &:hover {
+                background: linear-gradient(188deg, #350278, #1b038e);
+                color: white;
+            }
+
+
+        }
+    }
+
+    @media screen and (min-width: 650px) {
+        .contact-form {
+            height: 80vh;
+            width: 85vw;
+            max-width: 1000px;
+
+            .send-form-on {
+                height: 60vh;
+                width: 65vw;
+
+                .buttonSend {
+                    width: 25rem;
+                    height: 3.5rem;
+
+                }
+            }
+
+            .buttonContact {
+                font-size: 1.7rem;
+
+                &:hover {
+                    background: linear-gradient(188deg, #350278, #1b038e);
+                    color: white;
+                }
+
+            }
+
+            .input {
+                height: 5rem;
+                width: 50rem;
+                font-size: 1.7rem;
+
+                &::placeholder {
+                    font-size: 1.7rem;
+                }
+
+            }
+
+            .textaera {
+                height: 20rem;
+                width: 50rem;
+                font-size: 1.7rem;
+
+                &::placeholder {
+                    font-size: 1.7rem;
+                }
+            }
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            .buttonContact {
+                height: 4rem;
+                width: 40rem;
+            }
+
+
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .contact-form {
+            height: 80vh;
+            width: 80vw;
+
+            .send-form-on {
+                height: 60vh;
+                max-width: 50vw;
+                font-size: 2rem;
+                
+
+                .buttonSend {
+                    width: 25rem;
+                    height: 3.5rem;
+                    font-size: 2rem;
+
+                }
+            }
+
+            .input {
+                height: 5rem;
+                width: 60rem;
+                font-size: 1.7rem;
+
+                &::placeholder {
+                    font-size: 1.7rem;
+                }
+
+            }
+
+            .textaera {
+                height: 20rem;
+                width: 60rem;
+                font-size: 1.7rem;
+
+                &::placeholder {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
