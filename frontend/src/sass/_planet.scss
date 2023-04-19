@@ -48,13 +48,16 @@ $planet-colours: (
         list-style: none;
         margin-top: 2.5rem;
         img {
+            width: 130px;
+            aspect-ratio: 1;
             border-radius: 50%;
+            object-fit: cover;
         }
     }
     li {
         margin-top: 1.9rem;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 800px) {
         --title-size: 3.6rem;
         --paragraph-size: 2.4rem;
         display: grid;
@@ -88,7 +91,6 @@ $planet-colours: (
             margin-top: 0;
         }
         ul {
-            flex-wrap: initial;
             gap: .9rem;
             img {
                 border-radius: initial;

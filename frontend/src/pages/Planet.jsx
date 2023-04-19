@@ -1,9 +1,30 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import planets from "../datas/planets";
 
 function Planet() {
   const { planet } = useParams();
   const planetName = planets[planet].name;
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    fetch(
+      `https://images-api.nasa.gov/search?q=${planet}&media_type=image&center=JPL`
+    )
+      .then((response) => response.json())
+      .then((data) =>
+        setImages(
+          data.collection.items.slice(0, 6).map((item) => {
+            return {
+              id: item.data[0].nasa_id,
+              src: item.links[0].href,
+              alt: item.data[0].description,
+            };
+          })
+        )
+      )
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <article className={`planet ${planet}`}>
       <h1>
@@ -22,26 +43,17 @@ function Planet() {
         hendrerit quis elit lobortis, gravida semper nunc. Praesent libero mi,
         accumsan a interdum non, ornare non risus.
       </p>
-      <ul>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-        <li>
-          <img src="/src/assets/earth-picture.jpg" alt="" />
-        </li>
-      </ul>
+      {images && (
+        <ul>
+          {images.map((image) => {
+            return (
+              <li key={image.id}>
+                <img lang="en" src={image.src} alt={image.alt} />
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </article>
   );
 }
