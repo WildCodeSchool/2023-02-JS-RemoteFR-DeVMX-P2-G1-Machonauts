@@ -10,11 +10,19 @@ function Planet() {
   const isNegativeNumber = (number) => {
     return number < 0;
   };
+  const getAuFromKm = (number) => {
+    return (number / 149597870.7).toFixed(3);
+  };
+  const getCelsiusFromKelvin = (number) => {
+    return Math.round(number - 273.15);
+  };
   const planetName = planets[planet].name;
   const planetDescription = planets[planet].description;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
   const [characteristics, setCharacteristics] = useState({});
   const [images, setImages] = useState([]);
+  const currentPlanetUCFirst =
+    currentPlanet[0].toUpperCase() + currentPlanet.slice(1);
   if (currentPlanet !== planet) setCurrentPlanet(planet);
   useEffect(() => {
     if (images) setImages([]);
@@ -35,7 +43,7 @@ function Planet() {
       )
       .catch((error) => console.error(error));
     fetch(
-      `https://api.le-systeme-solaire.net/rest/bodies?filter[]=id,eq,${currentPlanet}`
+      `https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,eq,${currentPlanetUCFirst}`
     )
       .then((response) => response.json())
       .then((data) => setCharacteristics(data.bodies[0]));
@@ -55,11 +63,22 @@ function Planet() {
             <h2>Caractéristiques orbitales</h2>
             <dl>
               <dt>Demi-grand axe</dt>
-              <dd>{displayNumber(characteristics.semimajorAxis)}&nbsp;km</dd>
+              <dd>
+                {displayNumber(characteristics.semimajorAxis)}&nbsp;km{" "}
+                <span>
+                  ({getAuFromKm(characteristics.semimajorAxis)}&nbsp;au)
+                </span>
+              </dd>
               <dt>Aphélie</dt>
-              <dd>{displayNumber(characteristics.aphelion)}&nbsp;km</dd>
+              <dd>
+                {displayNumber(characteristics.aphelion)}&nbsp;km{" "}
+                <span>({getAuFromKm(characteristics.aphelion)}&nbsp;au)</span>
+              </dd>
               <dt>Périhélie</dt>
-              <dd>{displayNumber(characteristics.perihelion)}&nbsp;km</dd>
+              <dd>
+                {displayNumber(characteristics.perihelion)}&nbsp;km{" "}
+                <span>({getAuFromKm(characteristics.perihelion)}&nbsp;au)</span>
+              </dd>
               <dt>Excentricité</dt>
               <dd>{displayNumber(characteristics.eccentricity)}</dd>
               <dt>Période de révolution</dt>
@@ -69,7 +88,9 @@ function Planet() {
               <dt>Nœud ascendant</dt>
               <dd>{displayNumber(characteristics.longAscNode)}°</dd>
               <dt>Satellites connus</dt>
-              <dd>{characteristics.moons.length}</dd>
+              <dd>
+                {characteristics.moons ? characteristics.moons.length : 0}
+              </dd>
             </dl>
           </section>
           <section>
@@ -119,7 +140,12 @@ function Planet() {
               <dt>
                 Température de surface <span>(à 100&nbsp;kPa)</span>
               </dt>
-              <dd>{displayNumber(characteristics.avgTemp)}&nbsp;K</dd>
+              <dd>
+                {displayNumber(characteristics.avgTemp)}&nbsp;K{" "}
+                <span>
+                  ({getCelsiusFromKelvin(characteristics.avgTemp)}&nbsp;°C)
+                </span>
+              </dd>
             </dl>
           </section>
         </>

@@ -3,7 +3,7 @@ import venus from "../assets/planets-surface/venus.jpg";
 import earth from "../assets/planets-surface/earth.jpg";
 import mars from "../assets/planets-surface/mars.jpg";
 import jupiter from "../assets/planets-surface/jupiter.jpg";
-import saturne from "../assets/planets-surface/saturne.jpg";
+import saturne from "../assets/planets-surface/saturn.jpg";
 import uranus from "../assets/planets-surface/uranus.jpg";
 import neptune from "../assets/planets-surface/neptune.jpg";
 

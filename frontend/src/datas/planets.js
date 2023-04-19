@@ -24,7 +24,7 @@ const planets = {
     description:
       "Jupiter est la cinquième planète du Système solaire par ordre d’éloignement du Soleil.",
   },
-  saturne: {
+  saturn: {
     name: "Saturne",
     description:
       "Saturne est la sixième planète du Système solaire par ordre d’éloignement du Soleil.",
