@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center; 
     flex-direction: column;
-    height: 500vh;
+    height: 350vh;
 
         /*.mercury{
             border-radius:6.25rem;
@@ -53,17 +53,28 @@
             height: 7.5rem;
             box-shadow: 1px 2px 5px #d6d2d2;
         }*/
-        h1{
+        .planet-pic {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20%;
+        }
+        .planet-name h1 {
+            display: flex;
+            justify-content: center;
             color: #d6d2d2;
             font-size: 18px;
             text-decoration: none;
             padding-top: 2rem;
         }
+
         .planet-img{
+            display: flex;
             border-radius: 8rem;
             height: 16rem;
             width: 16rem;
             box-shadow: 1px 2px 5px #d6d2d2;
+            gap: 7%;
         }
         /*.saturnring {
             height: 10rem;
@@ -74,6 +85,7 @@
             align-items: center; 
             flex-direction: row;
             height: 90vh; 
+            column-gap: 0;
                   
                 /*.mercury{
                     border-radius: 6.25rem;
@@ -127,7 +139,10 @@
                     height: 10rem;
                 }*/
 
-                h1{
+                .planet-name h1{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-right: 2rem;
                     color: #d6d2d2;
                     font-size: 27px;
                     text-decoration: none;
@@ -153,7 +168,7 @@
                     outline: calc(var(--s)/2) solid #0009;
                     outline-offset: calc(var(--s)/-2);
                     cursor: pointer;
-                    transition: 6s;
+                    transition: 3s;
                   }
                   img:hover {
                     outline: var(--b) solid var(--c);
