@@ -48,7 +48,10 @@ $planet-colours: (
         list-style: none;
         margin-top: 2.5rem;
         img {
+            width: 130px;
+            aspect-ratio: 1;
             border-radius: 50%;
+            object-fit: cover;
         }
     }
     li {
