@@ -16,6 +16,11 @@ function TeamCard() {
           dignissimos?
         </p>
       </div>
+      <div className="icons-container">
+        <i className="fa-brands fa-github" />
+        <i className="fa-brands fa-linkedin-in" />
+        <i className="fa-solid fa-envelope" />
+      </div>
     </div>
   );
 }
