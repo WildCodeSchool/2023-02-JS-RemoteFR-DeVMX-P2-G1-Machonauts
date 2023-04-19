@@ -42,13 +42,17 @@
         gap: 3rem;
         justify-content: center;
 
-        i{
-   font-size: 3rem;
-        }
-        i:hover{
-            color: aqua;
+        a{
+        color: inherit;
 
+            i{
+                font-size: 3rem;
+                    }
+                    i:hover{
+                        color: aqua;
+                    }
         }
+   
     }
     
   }

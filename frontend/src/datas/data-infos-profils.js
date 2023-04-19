@@ -1,23 +1,26 @@
 const profils = [
   {
+    id: 1,
     firstName: "Nicolas",
     lastName: "Lopes",
     title: "Spécialiste communication",
     description: "",
     linkedin: "https://www.linkedin.com/in/nicolas-lopes-21441478",
     github: "https://github.com/SEF936",
-    mail: "",
+    mail: "lopes_nico@yahoo.fr",
   },
   {
+    id: 2,
     firstName: "Damien",
     lastName: "Arnaud",
-    title: "Pilote spacial",
+    title: "Pilote spatial",
     description: "",
     linkedin: "https://www.linkedin.com/in/damien-a-5a303660/",
     github: "https://github.com/Zanelidd",
     mail: "",
   },
   {
+    id: 3,
     firstName: "Jean-baptiste",
     lastName: "Noiraud",
     title: "Astronome",
@@ -27,6 +30,7 @@ const profils = [
     mail: "",
   },
   {
+    id: 4,
     firstName: "Victor",
     lastName: "Brito",
     title: "Spécialiste technique",

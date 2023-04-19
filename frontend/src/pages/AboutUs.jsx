@@ -1,3 +1,4 @@
+import profils from "../datas/data-infos-profils";
 import TeamCard from "../components/TeamCard";
 
 function AboutUs() {
@@ -21,10 +22,9 @@ function AboutUs() {
       <div className="team-infos-container">
         <h1>Notre équipe</h1>
         <div className="team-cards-container">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
+          {profils.map((profil) => {
+            return <TeamCard profil={profil} key={profil.id} />;
+          })}
         </div>
       </div>
     </div>
