@@ -5,10 +5,13 @@ import planets from "../datas/planets";
 function Planet() {
   const { planet } = useParams();
   const planetName = planets[planet].name;
+  const [currentPlanet, setCurrentPlanet] = useState(planet);
   const [images, setImages] = useState([]);
+  if (currentPlanet !== planet) setCurrentPlanet(planet);
   useEffect(() => {
+    if (images) setImages([]);
     fetch(
-      `https://images-api.nasa.gov/search?q=${planet}&media_type=image&center=JPL`
+      `https://images-api.nasa.gov/search?q=${currentPlanet}&media_type=image&center=JPL`
     )
       .then((response) => response.json())
       .then((data) =>
@@ -23,7 +26,7 @@ function Planet() {
         )
       )
       .catch((error) => console.error(error));
-  }, []);
+  }, [currentPlanet]);
 
   return (
     <article className={`planet ${planet}`}>
