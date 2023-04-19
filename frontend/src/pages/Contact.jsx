@@ -4,6 +4,8 @@ function Contact() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [changeClass, setChangeClass] = useState("send-form-off");
 
   return (
     <div className="contact-page">
@@ -39,8 +41,34 @@ function Contact() {
         <textarea
           className="textaera"
           placeholder="Enter your message here :"
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
         />
-        <button className="buttonContact" type="button">
+
+        <div id="send_form" className={changeClass}>
+          <p>Demande transmise</p>
+          <p>See you in space, Cowboy !</p>
+          <button
+            className="buttonSend"
+            type="button"
+            onClick={() => {
+              setChangeClass("send-form-off");
+              setFirstName("");
+              setLastName("");
+              setEmail("");
+              setFirstName("");
+              setMessage("");
+            }}
+          >
+            &#128640;
+          </button>
+        </div>
+
+        <button
+          className="buttonContact"
+          type="button"
+          onClick={() => setChangeClass("send-form-on")}
+        >
           Send
         </button>
       </form>
