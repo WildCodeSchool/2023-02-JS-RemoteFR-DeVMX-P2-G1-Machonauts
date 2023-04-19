@@ -2,7 +2,7 @@ function Planet() {
   return (
     <article className="planet earth">
       <h1>
-        <img src="../src/assets/earth.png" alt="" /> Terre
+        <img src="/src/assets/earth.png" alt="" /> Terre
       </h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
@@ -17,22 +17,22 @@ function Planet() {
       </p>
       <ul>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
         <li>
-          <img src="../src/assets/earth-picture.jpg" alt="" />
+          <img src="/src/assets/earth-picture.jpg" alt="" />
         </li>
       </ul>
     </article>
