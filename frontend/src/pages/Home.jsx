@@ -9,7 +9,7 @@ function Home() {
             alt="Mercure"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Mercure</h1>
         </div>
       </div>
@@ -21,7 +21,7 @@ function Home() {
             alt="Venus"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Venus</h1>
         </div>
       </div>
@@ -33,7 +33,7 @@ function Home() {
             alt="Terre"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Terre</h1>
         </div>
       </div>
@@ -45,7 +45,7 @@ function Home() {
             alt="Mars"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Mars</h1>
         </div>
       </div>
@@ -57,7 +57,7 @@ function Home() {
             alt="Jupiter"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Jupiter</h1>
         </div>
       </div>
@@ -69,7 +69,7 @@ function Home() {
             alt="Saturne"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Saturne</h1>
         </div>
       </div>
@@ -81,7 +81,7 @@ function Home() {
             alt="Uranus"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Uranus</h1>
         </div>
       </div>
@@ -93,7 +93,7 @@ function Home() {
             alt="Neptune"
           />
         </a>
-        <div>
+        <div className="planet-name">
           <h1>Neptune</h1>
         </div>
       </div>
