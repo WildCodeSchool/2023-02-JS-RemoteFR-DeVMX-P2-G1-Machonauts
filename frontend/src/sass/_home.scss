@@ -3,121 +3,78 @@
     justify-content: space-around;
     align-items: center; 
     flex-direction: column;
-    height: 100vh;
+    height: 350vh;
+        .planet-pic {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10%;
+        }
+        .planet-name h1 {
+            display: flex;
+            justify-content: center;
+            color: #d6d2d2;
+            font-size: 27px;
+            text-decoration: none;
+            padding-top: 2rem;
+        }
 
-        .mercury{
-            border-radius:6.25rem;
-            height: 3.75rem;
-            width: 3.75rem;
+        .planet-img{
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            border-radius: 14rem;
+            height: 27rem;
+            width: 27rem;
             box-shadow: 1px 2px 5px #d6d2d2;
         }
-        .venus{
-            border-radius: 6.25rem;
-            width: 5.625rem;
-            height: 5.625rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .earth{
-            border-radius: 6.25rem;
-            width: 5.625rem;
-            height: 5.625rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .mars{
-            border-radius: 6.25rem;
-            width: 5rem;
-            height: 5rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .jupiter{
-            border-radius: 6.25rem;
-            width: 12.5rem;
-            height: 12.5rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .saturne{
-            border-radius: 6.25rem;
-            width: 9.375rem;
-            height: 9.375rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .uranus{
-            border-radius: 6.25rem;
-            width: 7.5rem;
-            height: 7.5rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        .neptune{
-            border-radius: 6.25rem;
-            width: 7.5rem;
-            height: 7.5rem;
-            box-shadow: 1px 2px 5px #d6d2d2;
-        }
-        /*.saturnring {
-            height: 10rem;
-        }*/
+
         @media (min-width: 600px){     
             display: flex;
             justify-content: space-around;
             align-items: center; 
             flex-direction: row;
-            height: 100vh; 
-                  
-                .mercury{
-                    border-radius: 6.25rem;
-                    height: 3.75rem;
-                    width: 3.75;
+            height: 90vh; 
+            column-gap: 0;
+                .planet-name h1{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-right: 2rem;
+                    color: #d6d2d2;
+                    font-size: 27px;
+                    text-decoration: none;
+                    padding-top: 3rem;
+                    padding-left: 2rem;
+                }
+                .planet-img{
+                    border-radius: 8rem;
+                    height: 16rem;
+                    width: 16rem;
                     box-shadow: 1px 2px 5px #d6d2d2;
                 }
-                .venus{
-                    border-radius: 6.25rem;
-                    width: 5.625rem;
-                    height: 5.625rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .earth{
-                    border-radius: 6.25rem;
-                    width: 5.625rem;
-                    height: 5.625rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .mars{
-                    border-radius: 6.25rem;
-                    width: 5rem;
-                    height: 5rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .jupiter{
-                    border-radius: 6.25rem;
-                    width: 12.5rem;
-                    height: 12.5rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .saturne{
-                    border-radius: 6.25rem;
-                    width: 9.375rem;
-                    height: 9.375rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .uranus{
-                    border-radius: 6.25rem;
-                    width: 7.5rem;
-                    height: 7.5rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                .neptune{
-                    border-radius: 6.25rem;
-                    width: 7.5rem;
-                    height: 7.5rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                /*.saturnring {
-                    height: 10rem;
-                }*/
-            
-    }      
+                img {
+                    --s: 30px;
+                    --b: 0px;
+                    --g: 12px;
+                    --c: #4ECDC4;
+                    
+                    width: var(--s);
+                    aspect-ratio: 1;
+                    outline: calc(var(--s)/2) solid #0009;
+                    outline-offset: calc(var(--s)/-2);
+                    cursor: pointer;
+                    transition: 3s;
+                  }
+                  img:hover {
+                    outline: var(--b) solid var(--c);
+                    outline-offset: var(--g);
+                    transform: rotate(360deg);
+                  }
+                  img + img {
+                    border-radius: 50%;
+                  }        
+    }          
 }
-
 
 
 
