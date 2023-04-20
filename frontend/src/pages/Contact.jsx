@@ -6,12 +6,14 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [changeClass, setChangeClass] = useState("send-form-off");
+  const disable = document.getElementById("button_contact");
 
   /* Validation Form*************************** */
 
   function submit(e) {
     e.preventDefault();
     setChangeClass("send-form-on");
+    disable.disabled = "disabled";
   }
 
   /* Form **************************** */
@@ -69,22 +71,25 @@ function Contact() {
         </button>
 
         <div id="send_form" className={changeClass}>
-          <p>Demande transmise</p>
-          <p>See you in space, Cowboy !</p>
-          <button
-            className="buttonSend"
-            type="button"
-            onClick={() => {
-              setChangeClass("send-form-off");
-              setFirstName("");
-              setLastName("");
-              setEmail("");
-              setFirstName("");
-              setMessage("");
-            }}
-          >
-            &#128640;
-          </button>
+          <div className="send-container">
+            <p>Demande transmise</p>
+            <p>See you in space, Cowboy !</p>
+            <button
+              className="buttonSend"
+              type="button"
+              onClick={() => {
+                setChangeClass("send-form-off");
+                setFirstName("");
+                setLastName("");
+                setEmail("");
+                setFirstName("");
+                setMessage("");
+                disable.disabled = false;
+              }}
+            >
+              &#128640;
+            </button>
+          </div>
         </div>
       </form>
     </div>
