@@ -11,9 +11,7 @@ function Planet() {
     return number < 0;
   };
   const getAuFromKm = (number) => {
-    return Number.parseFloat((number / 149597870.7).toFixed(3)).toLocaleString(
-      "fr-FR"
-    );
+    return (number / 149597870.7).toFixed(3);
   };
   const getCelsiusFromKelvin = (number) => {
     return Math.round(number - 273.15);
