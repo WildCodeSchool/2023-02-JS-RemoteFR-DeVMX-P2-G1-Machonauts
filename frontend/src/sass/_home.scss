@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center; 
     flex-direction: column;
-    height: 350vh;
+    min-height: 350vh;
         .planet-pic {
             display: flex;
             justify-content: space-around;
@@ -34,7 +34,7 @@
             justify-content: space-around;
             align-items: center; 
             flex-direction: row;
-            height: 90vh; 
+            min-height: 90vh;
             column-gap: 0;
                 .planet-name h1{
                     display: flex;
