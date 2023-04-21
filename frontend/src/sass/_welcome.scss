@@ -1,0 +1,52 @@
+@keyframes scene-transition {
+    25% {
+        filter: brightness(100%);
+    }
+
+    100% {
+        filter: brightness(100%);
+        -webkit-mask-size: 3500%;
+    }
+}
+
+.scene {
+    position: relative;
+    aspect-ratio: 2.4/1;
+    width: auto;
+
+    :is(:hover, :focus).scene-2 {
+        animation: scene-transition 3s 1 cubic-bezier(1, 0, 1, 1) forwards;
+        
+    }
+
+    %toolbelt {
+        background-repeat: no-repeat;
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+    }
+
+    .scene-1 {
+        @extend %toolbelt;
+       
+        width: auto;
+        background-image: radial-gradient(circle, #fff3 10%, transparent 20%),
+            url("./assets/earth-ga2fe5261d_1920.jpg");
+    }
+
+    .scene-2 {
+        @extend %toolbelt;
+     
+        width: auto;
+        background-image: url("./assets/8k_stars.jpg");
+        filter: brightness(100%);
+        -webkit-mask-image: url("./assets/logo-spacemx1.svg");
+        mask-image: url("./assets/logo-spacemx1.svg");
+        -webkit-mask-size: 10%;
+        mask-size: 10%;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+}
