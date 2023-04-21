@@ -89,7 +89,7 @@ function Planet() {
               <dt>Excentricité</dt>
               <dd>{displayNumber(characteristics.eccentricity)}</dd>
               <dt>Période de révolution</dt>
-              <dd>{displayNumber(characteristics.sideralOrbit)} jours</dd>
+              <dd>{displayNumber(characteristics.sideralOrbit)}&nbsp;jours</dd>
               <dt>Inclinaison sur l’écliptique</dt>
               <dd>{displayNumber(characteristics.inclination)}°</dd>
               <dt>Nœud ascendant</dt>
@@ -113,13 +113,13 @@ function Planet() {
               <dd>{displayNumber(characteristics.flattening)}</dd>
               <dt>Volume</dt>
               <dd>
-                {displayNumber(characteristics.vol.volValue)} × 10
+                {displayNumber(characteristics.vol.volValue)}&nbsp;×&nbsp;10
                 <sup>{displayNumber(characteristics.vol.volExponent)}</sup>
                 &nbsp;km<sup>3</sup>
               </dd>
               <dt>Masse</dt>
               <dd>
-                {displayNumber(characteristics.mass.massValue)} × 10
+                {displayNumber(characteristics.mass.massValue)}&nbsp;×&nbsp;10
                 <sup>{displayNumber(characteristics.mass.massExponent)}</sup>
                 &nbsp;kg
               </dd>
@@ -148,10 +148,8 @@ function Planet() {
                 Température de surface <span>(à 100&nbsp;kPa)</span>
               </dt>
               <dd>
-                {displayNumber(characteristics.avgTemp)}&nbsp;K{" "}
-                <span>
-                  ({getCelsiusFromKelvin(characteristics.avgTemp)}&nbsp;°C)
-                </span>
+                {displayNumber(characteristics.avgTemp)}&nbsp;K (
+                {getCelsiusFromKelvin(characteristics.avgTemp)}&nbsp;°C)
               </dd>
             </dl>
           </section>

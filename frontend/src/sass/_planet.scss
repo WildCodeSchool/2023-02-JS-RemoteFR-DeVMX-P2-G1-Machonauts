@@ -64,6 +64,12 @@ $planet-colours: (
         grid-template: repeat(2, auto) / repeat(2, 1fr);
         gap: 0 1rem;
     }
+    dt,
+    dd {
+        span {
+            display: block;
+        }
+    }
     dd {
         text-align: end;
     }
@@ -133,12 +139,6 @@ $planet-colours: (
         }
         dl {
             grid-template-columns: 1fr max-content;
-        }
-        dt,
-        dd {
-            span {
-                display: block;
-            }
         }
         .other-planets {
             grid-column: 1 / -1;
