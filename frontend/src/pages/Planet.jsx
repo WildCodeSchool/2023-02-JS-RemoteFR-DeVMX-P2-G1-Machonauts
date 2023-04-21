@@ -157,7 +157,13 @@ function Planet() {
           {images.map((image) => {
             return (
               <li key={image.id}>
-                <img lang="en" src={image.src} alt={image.alt} />
+                <img
+                  lang="en"
+                  src={image.src}
+                  alt={image.alt}
+                  width="130"
+                  height="130"
+                />
               </li>
             );
           })}
