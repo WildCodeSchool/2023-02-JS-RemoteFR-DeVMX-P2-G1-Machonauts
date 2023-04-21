@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Welcome from "./pages/Welcome";
 import "./styles.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/planet/:planet" element={<Planet />} />
           <Route path="/a-propos" element={<AboutUs />} />
