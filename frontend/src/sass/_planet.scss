@@ -33,18 +33,20 @@ $planet-colours: (
         font-size: var(--title-size);
         font-weight: normal;
     }
+    h1,
+    ul {
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1;
+        }
+    }
     h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 1.9rem;
-        img {
-            width: 126px;
-            border-radius: 50%;
-            object-fit: cover;
-            aspect-ratio: 1;
-        }
     }
     ul {
         display: flex;
@@ -53,11 +55,6 @@ $planet-colours: (
         justify-content: center;
         list-style: none;
         margin-top: 2.5rem;
-        img {
-            aspect-ratio: 1;
-            border-radius: 50%;
-            object-fit: cover;
-        }
     }
     li {
         margin-top: 1.9rem;
@@ -119,7 +116,6 @@ $planet-colours: (
             margin-bottom: 0;
             img {
                 display: block;
-                width: 330px;
             }
         }
         h2 {

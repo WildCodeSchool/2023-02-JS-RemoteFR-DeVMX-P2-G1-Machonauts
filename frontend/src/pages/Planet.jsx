@@ -54,7 +54,12 @@ function Planet() {
   return (
     <article className={`planet ${planet}`}>
       <h1>
-        <img src={`/src/assets/planets-surface/${planet}.jpg`} alt="" />
+        <img
+          src={`/src/assets/planets-surface/${planet}.jpg`}
+          alt=""
+          width="330"
+          height="330"
+        />
         {}
         {planetName}
       </h1>
