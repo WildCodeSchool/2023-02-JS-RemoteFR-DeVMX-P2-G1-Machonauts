@@ -89,6 +89,13 @@ $planet-colours: (
             }
         }
     }
+    @media (max-width: 799px) {
+        h1 {
+            img {
+                width: 126px;
+            }
+        }
+    }
     @media (min-width: 800px) {
         font-size: var(--paragraph-size-desktop);
         display: grid;
