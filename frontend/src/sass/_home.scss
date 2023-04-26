@@ -1,4 +1,4 @@
-.rocket-container{
+.rocket-container-home{
     width: 100%;
     height: 10rem;
     justify-content: center;
@@ -11,7 +11,7 @@
 
 }
 @media screen and (min-width:600px) {
-    .rocket-container{
+    .rocket-container-home{
         margin-bottom: 0;
 
         img{

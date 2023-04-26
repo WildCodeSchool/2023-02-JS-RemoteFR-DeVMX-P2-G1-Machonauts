@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="home-global-container">
       <Link to="../rockets">
-        <div className="rocket-container">
+        <div className="rocket-container-home">
           <img src={rocket} alt="" />
         </div>
       </Link>
