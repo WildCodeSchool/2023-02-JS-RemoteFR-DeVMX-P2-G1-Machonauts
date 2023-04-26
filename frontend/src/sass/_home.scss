@@ -1,57 +1,88 @@
-.home-global-container{
-  display: flex;
-  flex-direction: column;
-}
-.rocket-container-home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 9rem;
-    margin-bottom: 5rem;
-
-    .rocket-img{
-        height: 20rem;
-        width: 10rem;
+    .home-global-container {
+        display: flex;
+        flex-direction: column;
     }
-}
-@media screen and (min-width:600px) {
-    .rocket-container-home{
-        display: block;
-        position: relative;
-        margin-bottom: 0;
-        
-        .rocket-img{
-            height: 30rem;
-            width: 15rem;
-            rotate: 90deg;
-            animation: animate 15s ease-in-out infinite;
+
+    .rocket-container-home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 9rem;
+        margin-bottom: 5rem;
+
+        .rocket-img {
+            height: 20rem;
+            width: 10rem;
         }
     }
-    @keyframes animate {
-      0%{transform: translateY(200px);}
-      15%{transform: translateY(-850px);}
-      35%{transform: translateY(-850px);}
-      50%{transform: translateY(-1600px);}  
-      55%{transform: translateY(-1630px) rotate(180deg);}       
-      65%{transform: translateY(-900px) rotate(180deg);}
-      85%{transform: translateY(-900px) rotate(180deg);}
-      95%{transform: translateY(200px) rotate(180deg);}
-      100%{transform: translateY(200px) rotate(0deg);}
-    }
-}
 
-.home {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    flex-direction: column;
-    min-height: 350vh;
+    @media screen and (min-width:600px) {
+        .rocket-container-home {
+            display: block;
+            position: relative;
+            margin-bottom: 0;
+
+            .rocket-img {
+                height: 30rem;
+                width: 15rem;
+                rotate: 90deg;
+                animation: animate 15s ease-in-out infinite;
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(200px);
+            }
+
+            15% {
+                transform: translateY(-850px);
+            }
+
+            35% {
+                transform: translateY(-850px);
+            }
+
+            50% {
+                transform: translateY(-1600px);
+            }
+
+            55% {
+                transform: translateY(-1630px) rotate(180deg);
+            }
+
+            65% {
+                transform: translateY(-900px) rotate(180deg);
+            }
+
+            85% {
+                transform: translateY(-900px) rotate(180deg);
+            }
+
+            95% {
+                transform: translateY(200px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(200px) rotate(0deg);
+            }
+        }
+    }
+
+    .home {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        min-height: 350vh;
+
         .planet-pic {
             display: flex;
             justify-content: space-around;
             align-items: center;
             gap: 10%;
         }
+
         .planet-name h1 {
             display: flex;
             justify-content: center;
@@ -61,7 +92,7 @@
             padding-top: 2rem;
         }
 
-        .planet-img{
+        .planet-img {
             display: flex;
             justify-content: center;
             gap: 5%;
@@ -71,13 +102,14 @@
             box-shadow: 1px 2px 5px #d6d2d2;
         }
 
-        @media (min-width: 600px){     
+        @media (min-width: 600px) {
             display: flex;
             justify-content: space-around;
-            align-items: center; 
+            align-items: center;
             flex-direction: row;
             min-height: 75vh;
             column-gap: 0;
+
                 .planet-name h1{
                     display: flex;
                     justify-content: space-around;
@@ -157,10 +189,63 @@
     50% {
         transform: rotate(-30deg) translateY(80vh) scale(1);
     }
-    75% {
-        transform: rotate(15deg) scale(6);
-    }
     to {
         transform: rotate(30deg) translateY(0vh) scale(0.1);
+    } 
+   }
+
+    .astronaut {
+        display: none;
+
+        @media (min-width: 1000px) {
+            display: block;
+            width: 100px;
+            aspect-ratio: 1;
+            position: absolute;
+            left: 50vw;
+            animation: astronaut 6s linear infinite;
+
+            img:last-child {
+                width: 150px;
+                margin-left: -60px;
+                aspect-ratio: 1;
+                position: absolute;
+                top: -18px;
+                left: 50%;
+            }
+        }
+   
+
+  
+    .bonus-star {
+        background-color: rgb(247, 84, 84);
+        height: 0.3rem;
+        width: 0.3rem;
+        border-radius: 100px;
+        position: absolute;
+        top: 37%;
+        left: 28%;
+        filter: blur(5px);
+        filter: saturate(75%);
+        box-shadow: 0px 0px 150px 11px rgb(227, 214, 165), inset 0px 0px 50px 12px rgb(243, 89, 89);
+        animation-duration: 7s;
+        animation-name: clignoter;
+        animation-iteration-count: infinite;
+        transition: none;
+
+        @keyframes clignoter {
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
     }
-}
