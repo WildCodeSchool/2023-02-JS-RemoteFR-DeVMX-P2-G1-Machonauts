@@ -5,12 +5,14 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
+import ParticleBackground from "./components/ParticleBackground";
 import "./styles.scss";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ParticleBackground />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
