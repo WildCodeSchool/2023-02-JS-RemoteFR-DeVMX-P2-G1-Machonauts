@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import rocket from "../assets/rocket-logo.webp";
 
 function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <>
       <Header />
@@ -112,11 +115,19 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="astronaut">
-        <img src="../src/assets/astronaut.svg" alt="" />
-        <img src="../src/assets/benoit-vandanjon.png" alt="" />
-      </div>
-      <span className="bonus-star" />
+      {isVisible && (
+        <div className="astronaut">
+          <img src="../src/assets/astronaut.svg" alt="" />
+          <img src="../src/assets/benoit-vandanjon.png" alt="" />
+        </div>
+      )}
+      <button
+        type="button"
+        className="bonus-star"
+        onClick={() => setIsVisible(!isVisible)}
+      >
+        {" "}
+      </button>
       <Footer />
     </>
   );
