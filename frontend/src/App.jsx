@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
 import "./styles.scss";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/planet/:planet" element={<Planet />} />
+          <Route path="/rockets" element={<Rockets />} />
           <Route path="/a-propos" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
