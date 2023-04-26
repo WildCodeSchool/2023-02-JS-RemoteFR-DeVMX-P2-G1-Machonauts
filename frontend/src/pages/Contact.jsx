@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Contact() {
   const [firstName, setFirstName] = useState("");
@@ -19,80 +21,84 @@ function Contact() {
   /* Form **************************** */
 
   return (
-    <div className="contact-page">
-      <form className="contact-form" id="my_Form" onSubmit={submit}>
-        <h1 className="h1-Contact">Contact Us</h1>
-        <label>
-          <input
-            id="first_Name"
-            className="input"
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => {
-              setFirstName(e.target.value);
-            }}
-            required
-          />
-        </label>
-        <label>
-          <input
-            id="last_Name"
-            className="input"
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          <input
-            id="email"
-            className="input"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <textarea
-          id="text_area"
-          className="textaera"
-          placeholder="Enter your message here :"
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-          required
-        />
-
-        <button className="buttonContact" id="button_contact" type="submit">
-          Send
-        </button>
-
-        <div id="send_form" className={changeClass}>
-          <div className="send-container">
-            <p>Demande transmise</p>
-            <p>See you in space, Cowboy !</p>
-            <button
-              className="buttonSend"
-              type="button"
-              onClick={() => {
-                setChangeClass("send-form-off");
-                setFirstName("");
-                setLastName("");
-                setEmail("");
-                setFirstName("");
-                setMessage("");
-                disable.disabled = false;
+    <>
+      <Header />
+      <div className="contact-page">
+        <form className="contact-form" id="my_Form" onSubmit={submit}>
+          <h1 className="h1-Contact">Contact Us</h1>
+          <label>
+            <input
+              id="first_Name"
+              className="input"
+              type="text"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
               }}
-            >
-              &#128640;
-            </button>
+              required
+            />
+          </label>
+          <label>
+            <input
+              id="last_Name"
+              className="input"
+              type="text"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            <input
+              id="email"
+              className="input"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+          <textarea
+            id="text_area"
+            className="textaera"
+            placeholder="Enter your message here :"
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+            required
+          />
+
+          <button className="buttonContact" id="button_contact" type="submit">
+            Send
+          </button>
+
+          <div id="send_form" className={changeClass}>
+            <div className="send-container">
+              <p>Demande transmise</p>
+              <p>See you in space, Cowboy !</p>
+              <button
+                className="buttonSend"
+                type="button"
+                onClick={() => {
+                  setChangeClass("send-form-off");
+                  setFirstName("");
+                  setLastName("");
+                  setEmail("");
+                  setFirstName("");
+                  setMessage("");
+                  disable.disabled = false;
+                }}
+              >
+                &#128640;
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 }
 

@@ -3,8 +3,6 @@ import Home from "./pages/Home";
 import Planet from "./pages/Planet";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
 import ParticleBackground from "./components/ParticleBackground";
@@ -15,7 +13,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <ParticleBackground />
-        <Header />
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
@@ -24,7 +21,6 @@ function App() {
           <Route path="/a-propos" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
