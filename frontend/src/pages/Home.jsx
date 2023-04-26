@@ -5,13 +5,13 @@ import rocket from "../assets/rocket-logo.webp";
 
 function Home() {
   return (
-    <>
+  <>
       <Header />
-      <div className="home-global-container">
+    <div className="home-global-container">
+      <div className="rocket-container-home">
         <Link to="../rockets">
-          <div className="rocket-container">
-            <img src={rocket} alt="" />
-          </div>
+          <img className="rocket-img" src={rocket} alt="rocket-draw" />
+      </div>
         </Link>
         <div className="home">
           <div className="planets-pic">
