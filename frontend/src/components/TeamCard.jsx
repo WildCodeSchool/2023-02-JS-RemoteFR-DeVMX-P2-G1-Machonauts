@@ -5,7 +5,7 @@ function TeamCard({ profil }) {
   return (
     <div className="card-machaunaut-container">
       <div className="picture-profil-container">
-        <img src={imgProfil} alt="" />
+        <img src={imgProfil} alt="logo astrnaut" />
         <h2>
           {`${profil.firstName}    
           ${profil.lastName}`}
