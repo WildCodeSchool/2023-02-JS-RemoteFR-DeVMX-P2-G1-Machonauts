@@ -134,8 +134,9 @@
         width: 100px;
         aspect-ratio: 1;
         position: absolute;
-        top: 10vh;
-        left: 50vw;
+        top: 37vh;
+        left: 26vw;
+        z-index: 1;
         animation: astronaut 10s linear infinite;
         img:last-child {
             width: 150px;
