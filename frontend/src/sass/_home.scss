@@ -126,3 +126,43 @@
 	min-height: 100vh;
 	background: black url("./assets/8k_stars.jpg") no-repeat fixed center / cover;
 }
+
+.astronaut {
+    display: none;
+    @media (min-width: 1000px) {
+        display: block;
+        width: 100px;
+        aspect-ratio: 1;
+        position: absolute;
+        left: 50vw;
+        animation: astronaut 6s linear infinite;
+        img:last-child {
+            width: 150px;
+            margin-left: -60px;
+            aspect-ratio: 1;
+            position: absolute;
+            top: -18px;
+            left: 50%;
+        }
+    }
+}
+@keyframes astronaut {
+    from {
+        top: -25vh;
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(-15deg) scale(6);
+    }
+    50% {
+        top: 150vh;
+        transform: rotate(-30deg) scale(1);
+    }
+    75% {
+        transform: rotate(15deg) scale(6);
+    }
+    to {
+        top: -25vh;
+        transform: rotate(30deg);
+    }
+}
