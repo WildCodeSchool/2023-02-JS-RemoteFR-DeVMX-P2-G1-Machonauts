@@ -8,11 +8,11 @@ function Home() {
     <>
       <Header />
       <div className="home-global-container">
-        <Link to="../rockets">
-          <div className="rocket-container">
-            <img src={rocket} alt="" />
-          </div>
-        </Link>
+        <div className="rocket-container-home">
+          <Link to="../rockets">
+            <img className="rocket-img" src={rocket} alt="rocket-draw" />
+          </Link>
+        </div>
         <div className="home">
           <div className="planets-pic">
             <Link to="/planet/mercury">
