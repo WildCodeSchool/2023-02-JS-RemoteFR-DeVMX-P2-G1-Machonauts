@@ -112,6 +112,10 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="astronaut">
+        <img src="../src/assets/astronaut.svg" alt="" />
+        <img src="../src/assets/benoit-vandanjon.png" alt="" />
+      </div>
       <Footer />
     </>
   );
