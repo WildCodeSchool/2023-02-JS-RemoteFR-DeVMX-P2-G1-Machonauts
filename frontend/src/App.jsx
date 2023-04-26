@@ -7,12 +7,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
+import ParticleBackground from "./components/ParticleBackground";
+// import ParticleBackground from "./components/ParticleBackground";
 import "./styles.scss";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ParticleBackground />
         <Header />
         <Routes>
           <Route path="/" element={<Welcome />} />
