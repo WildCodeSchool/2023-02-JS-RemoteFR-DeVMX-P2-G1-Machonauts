@@ -1,23 +1,42 @@
-.rocket-container{
-    width: 100%;
-    height: 10rem;
-    justify-content: center;
+.home-global-container{
+  display: flex;
+  flex-direction: column;
+}
+.rocket-container-home{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
     margin-bottom: 5rem;
-    img{
+
+    .rocket-img{
         height: 20rem;
         width: 10rem;
     }
-
 }
 @media screen and (min-width:600px) {
-    .rocket-container{
+    .rocket-container-home{
+        display: block;
+        position: relative;
         margin-bottom: 0;
-
-        img{
+        
+        .rocket-img{
             height: 30rem;
             width: 15rem;
+            rotate: 90deg;
+            animation: animate 15s ease-in-out infinite;
         }
+    }
+    @keyframes animate {
+      0%{transform: translateY(200px);}
+      15%{transform: translateY(-850px);}
+      35%{transform: translateY(-850px);}
+      50%{transform: translateY(-1600px);}  
+      55%{transform: translateY(-1630px) rotate(180deg);}       
+      65%{transform: translateY(-900px) rotate(180deg);}
+      85%{transform: translateY(-900px) rotate(180deg);}
+      95%{transform: translateY(200px) rotate(180deg);}
+      100%{transform: translateY(200px) rotate(0deg);}
     }
 }
 
@@ -76,7 +95,7 @@
                     box-shadow: 1px 2px 5px #d6d2d2;
                 }
                 img {
-                    --s: 30px;
+                    --s: 0px;
                     --b: 0px;
                     --g: 12px;
                     --c: #4ECDC4;
@@ -84,7 +103,6 @@
                     width: var(--s);
                     aspect-ratio: 1;
                     outline: calc(var(--s)/2) solid #0009;
-                    outline-offset: calc(var(--s)/-2);
                     cursor: pointer;
                     transition: 3s;
                   }
@@ -116,8 +134,9 @@
         width: 100px;
         aspect-ratio: 1;
         position: absolute;
+        top: 10vh;
         left: 50vw;
-        animation: astronaut 6s linear infinite;
+        animation: astronaut 10s linear infinite;
         img:last-child {
             width: 150px;
             margin-left: -60px;
@@ -130,21 +149,18 @@
 }
 @keyframes astronaut {
     from {
-        top: -25vh;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translateY(0vh) scale(0.1);
     }
     25% {
         transform: rotate(-15deg) scale(6);
     }
     50% {
-        top: 150vh;
-        transform: rotate(-30deg) scale(1);
+        transform: rotate(-30deg) translateY(80vh) scale(1);
     }
     75% {
         transform: rotate(15deg) scale(6);
     }
     to {
-        top: -25vh;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translateY(0vh) scale(0.1);
     }
 }
