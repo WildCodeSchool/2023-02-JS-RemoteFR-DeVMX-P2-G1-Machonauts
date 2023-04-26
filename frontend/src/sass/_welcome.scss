@@ -16,15 +16,12 @@
 .scene {
     position: relative;
     aspect-ratio: 2.4/1;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
 
     &.animate .scene-2 {
         animation: scene-transition 3s cubic-bezier(1, 0, 1, 1) forwards;
 
-        @media screen and (min-width : 650px) {
-            height: 88vh;
-        }
     }
 
     %toolbelt {

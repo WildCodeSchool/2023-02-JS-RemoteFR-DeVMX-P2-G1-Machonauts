@@ -134,8 +134,9 @@
         width: 100px;
         aspect-ratio: 1;
         position: absolute;
+        top: 10vh;
         left: 50vw;
-        animation: astronaut 6s linear infinite;
+        animation: astronaut 10s linear infinite;
         img:last-child {
             width: 150px;
             margin-left: -60px;
@@ -148,21 +149,18 @@
 }
 @keyframes astronaut {
     from {
-        top: -25vh;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translateY(0vh) scale(0.1);
     }
     25% {
         transform: rotate(-15deg) scale(6);
     }
     50% {
-        top: 150vh;
-        transform: rotate(-30deg) scale(1);
+        transform: rotate(-30deg) translateY(80vh) scale(1);
     }
     75% {
         transform: rotate(15deg) scale(6);
     }
     to {
-        top: -25vh;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translateY(0vh) scale(0.1);
     }
 }
