@@ -112,6 +112,7 @@
 .astronaut {
     display: none;
     @media (min-width: 1000px) {
+        display: block;
         width: 100px;
         aspect-ratio: 1;
         position: absolute;
