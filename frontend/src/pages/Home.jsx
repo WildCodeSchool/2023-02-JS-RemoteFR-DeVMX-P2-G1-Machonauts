@@ -118,7 +118,7 @@ function Home() {
       {isVisible && (
         <div className="astronaut">
           <img src="../src/assets/astronaut.svg" alt="" />
-          <img src="../src/assets/benoit-vandanjon.png" alt="" />
+          <img src="../src/assets/astronaut-head.png" alt="" />
         </div>
       )}
       <button
