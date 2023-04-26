@@ -1,3 +1,26 @@
+.rocket-container{
+    width: 100%;
+    height: 10rem;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5rem;
+    img{
+        height: 20rem;
+        width: 10rem;
+    }
+
+}
+@media screen and (min-width:600px) {
+    .rocket-container{
+        margin-bottom: 0;
+
+        img{
+            height: 30rem;
+            width: 15rem;
+        }
+    }
+}
+
 .home {
     display: flex;
     justify-content: space-around;
@@ -34,7 +57,7 @@
             justify-content: space-around;
             align-items: center; 
             flex-direction: row;
-            min-height: 90vh;
+            min-height: 75vh;
             column-gap: 0;
                 .planet-name h1{
                     display: flex;
