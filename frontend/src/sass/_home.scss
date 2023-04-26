@@ -1,57 +1,121 @@
-.home-global-container{
-  display: flex;
-  flex-direction: column;
-}
-.rocket-container-home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 9rem;
-    margin-bottom: 5rem;
+    .bonus-star {
+        background-color: rgb(247, 84, 84);
+        height: 0.3rem;
+        width: 0.3rem;
+        border-radius: 100px;
+        position: absolute;
+        top: 37%;
+        left: 28%;
+        filter: blur(5px);
+        filter: saturate(75%);
+        box-shadow: 0px 0px 150px 11px rgb(227, 214, 165), inset 0px 0px 50px 12px rgb(243, 89, 89);
+        animation-duration: 7s;
+        animation-name: clignoter;
+        animation-iteration-count: infinite;
+        transition: none;
 
-    .rocket-img{
-        height: 20rem;
-        width: 10rem;
+        @keyframes clignoter {
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
     }
-}
-@media screen and (min-width:600px) {
-    .rocket-container-home{
-        display: block;
-        position: relative;
-        margin-bottom: 0;
-        
-        .rocket-img{
-            height: 30rem;
-            width: 15rem;
-            rotate: 90deg;
-            animation: animate 15s ease-in-out infinite;
+
+    .home-global-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rocket-container-home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 9rem;
+        margin-bottom: 5rem;
+
+        .rocket-img {
+            height: 20rem;
+            width: 10rem;
         }
     }
-    @keyframes animate {
-      0%{transform: translateY(200px);}
-      15%{transform: translateY(-850px);}
-      35%{transform: translateY(-850px);}
-      50%{transform: translateY(-1600px);}  
-      55%{transform: translateY(-1630px) rotate(180deg);}       
-      65%{transform: translateY(-900px) rotate(180deg);}
-      85%{transform: translateY(-900px) rotate(180deg);}
-      95%{transform: translateY(200px) rotate(180deg);}
-      100%{transform: translateY(200px) rotate(0deg);}
-    }
-}
 
-.home {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    flex-direction: column;
-    min-height: 350vh;
+    @media screen and (min-width:600px) {
+        .rocket-container-home {
+            display: block;
+            position: relative;
+            margin-bottom: 0;
+
+            .rocket-img {
+                height: 30rem;
+                width: 15rem;
+                rotate: 90deg;
+                animation: animate 15s ease-in-out infinite;
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(200px);
+            }
+
+            15% {
+                transform: translateY(-850px);
+            }
+
+            35% {
+                transform: translateY(-850px);
+            }
+
+            50% {
+                transform: translateY(-1600px);
+            }
+
+            55% {
+                transform: translateY(-1630px) rotate(180deg);
+            }
+
+            65% {
+                transform: translateY(-900px) rotate(180deg);
+            }
+
+            85% {
+                transform: translateY(-900px) rotate(180deg);
+            }
+
+            95% {
+                transform: translateY(200px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(200px) rotate(0deg);
+            }
+        }
+    }
+
+    .home {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        min-height: 350vh;
+
         .planet-pic {
             display: flex;
             justify-content: space-around;
             align-items: center;
             gap: 10%;
         }
+
         .planet-name h1 {
             display: flex;
             justify-content: center;
@@ -61,7 +125,7 @@
             padding-top: 2rem;
         }
 
-        .planet-img{
+        .planet-img {
             display: flex;
             justify-content: center;
             gap: 5%;
@@ -71,98 +135,110 @@
             box-shadow: 1px 2px 5px #d6d2d2;
         }
 
-        @media (min-width: 600px){     
+        @media (min-width: 600px) {
             display: flex;
             justify-content: space-around;
-            align-items: center; 
+            align-items: center;
             flex-direction: row;
             min-height: 75vh;
             column-gap: 0;
-                .planet-name h1{
-                    display: flex;
-                    justify-content: space-around;
-                    margin-right: 2rem;
-                    color: #d6d2d2;
-                    font-size: 27px;
-                    text-decoration: none;
-                    padding-top: 3rem;
-                    padding-left: 2rem;
-                }
-                .planet-img{
-                    border-radius: 8rem;
-                    height: 16rem;
-                    width: 16rem;
-                    box-shadow: 1px 2px 5px #d6d2d2;
-                }
-                img {
-                    --s: 0px;
-                    --b: 0px;
-                    --g: 12px;
-                    --c: #4ECDC4;
-                    
-                    width: var(--s);
-                    aspect-ratio: 1;
-                    outline: calc(var(--s)/2) solid #0009;
-                    cursor: pointer;
-                    transition: 3s;
-                  }
-                  img:hover {
-                    outline: var(--b) solid var(--c);
-                    outline-offset: var(--g);
-                    transform: rotate(360deg);
-                  }
-                  img + img {
-                    border-radius: 50%;
-                  }        
-    }          
-}
 
+            .planet-name h1 {
+                display: flex;
+                justify-content: space-around;
+                margin-right: 2rem;
+                color: #d6d2d2;
+                font-size: 27px;
+                text-decoration: none;
+                padding-top: 3rem;
+                padding-left: 2rem;
+            }
 
+            .planet-img {
+                border-radius: 8rem;
+                height: 16rem;
+                width: 16rem;
+                box-shadow: 1px 2px 5px #d6d2d2;
+            }
 
+            img {
+                --s: 0px;
+                --b: 0px;
+                --g: 12px;
+                --c: #4ECDC4;
 
+                width: var(--s);
+                aspect-ratio: 1;
+                outline: calc(var(--s)/2) solid #0009;
+                cursor: pointer;
+                transition: 3s;
+            }
 
+            img:hover {
+                outline: var(--b) solid var(--c);
+                outline-offset: var(--g);
+                transform: rotate(360deg);
+            }
 
-#root {
-	min-height: 100vh;
-	background: black url("./assets/8k_stars.jpg") no-repeat fixed center / cover;
-}
-
-.astronaut {
-    display: none;
-    @media (min-width: 1000px) {
-        display: block;
-        width: 100px;
-        aspect-ratio: 1;
-        position: absolute;
-        left: 50vw;
-        animation: astronaut 6s linear infinite;
-        img:last-child {
-            width: 150px;
-            margin-left: -60px;
-            aspect-ratio: 1;
-            position: absolute;
-            top: -18px;
-            left: 50%;
+            img+img {
+                border-radius: 50%;
+            }
         }
     }
-}
-@keyframes astronaut {
-    from {
-        top: -25vh;
-        transform: rotate(30deg);
+
+
+
+
+
+
+    #root {
+        min-height: 100vh;
+        background: black url("./assets/8k_stars.jpg") no-repeat fixed center / cover;
     }
-    25% {
-        transform: rotate(-15deg) scale(6);
+
+    .astronaut {
+        display: none;
+
+        @media (min-width: 1000px) {
+            display: block;
+            width: 100px;
+            aspect-ratio: 1;
+            position: absolute;
+            left: 50vw;
+            animation: astronaut 6s linear infinite;
+
+            img:last-child {
+                width: 150px;
+                margin-left: -60px;
+                aspect-ratio: 1;
+                position: absolute;
+                top: -18px;
+                left: 50%;
+            }
+        }
     }
-    50% {
-        top: 150vh;
-        transform: rotate(-30deg) scale(1);
+
+    @keyframes astronaut {
+        from {
+            top: -25vh;
+            transform: rotate(30deg);
+        }
+
+        25% {
+            transform: rotate(-15deg) scale(6);
+        }
+
+        50% {
+            top: 150vh;
+            transform: rotate(-30deg) scale(1);
+        }
+
+        75% {
+            transform: rotate(15deg) scale(6);
+        }
+
+        to {
+            top: -25vh;
+            transform: rotate(30deg);
+        }
     }
-    75% {
-        transform: rotate(15deg) scale(6);
-    }
-    to {
-        top: -25vh;
-        transform: rotate(30deg);
-    }
-}

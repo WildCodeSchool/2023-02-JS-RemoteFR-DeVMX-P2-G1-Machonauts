@@ -116,6 +116,7 @@ function Home() {
         <img src="../src/assets/astronaut.svg" alt="" />
         <img src="../src/assets/benoit-vandanjon.png" alt="" />
       </div>
+      <span className="bonus-star" />
       <Footer />
     </>
   );
