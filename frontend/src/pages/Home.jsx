@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import rocket from "../assets/rocket-logo.webp";
+import rocket from "../assets/rocket22.png";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);

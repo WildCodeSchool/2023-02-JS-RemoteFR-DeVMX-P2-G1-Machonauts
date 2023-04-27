@@ -21,9 +21,10 @@
     margin-bottom: 0;
     
     .rocket-img{
-      height: 30rem;
-      width: 15rem;
+      height: 20rem;
+      width: 10rem;
       rotate: 90deg;
+      transform: rotateX(90deg);
       animation: animate 15s ease-in-out infinite;
     }
   }
