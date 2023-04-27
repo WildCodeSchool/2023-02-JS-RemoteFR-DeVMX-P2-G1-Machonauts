@@ -18,26 +18,25 @@
   .rocket-container-home{
     display: block;
     position: relative;
-    margin-bottom: 0;
+    margin-bottom: 0rem;
     
     .rocket-img{
-      height: 20rem;
-      width: 10rem;
-      rotate: 90deg;
-      transform: rotateX(90deg);
+      height: 25rem;
+      width: 12.5rem;
+      rotate: 90deg;   
       animation: animate 15s ease-in-out infinite;
     }
   }
   @keyframes animate {
-    0%{transform: translateY(200px);}
-    15%{transform: translateY(-850px);}
-    35%{transform: translateY(-850px);}
-    50%{transform: translateY(-1600px);}  
-    55%{transform: translateY(-1630px) rotate(180deg);}       
-    65%{transform: translateY(-900px) rotate(180deg);}
-    85%{transform: translateY(-900px) rotate(180deg);}
-    95%{transform: translateY(200px) rotate(180deg);}
-    100%{transform: translateY(200px) rotate(0deg);}
+    0%{transform: translateY(10.41vw);}
+    15%{transform: translateY(-44.2vw);}
+    35%{transform: translateY(-44.2vw);}
+    50%{transform: translateY(-83.2vw);}  
+    55%{transform: translateY(-84.76vw) rotate(180deg);}       
+    65%{transform: translateY(-46.8vw) rotate(180deg);}
+    85%{transform: translateY(-46.8vw) rotate(180deg);}
+    95%{transform: translateY(10.41vw) rotate(180deg);}
+    100%{transform: translateY(10.41vw) rotate(0deg);}
   }
 }
 
