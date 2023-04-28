@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import planets from "../datas/planets";
 
 function Planet() {
   const { planet } = useParams();
@@ -20,16 +19,26 @@ function Planet() {
   const getCelsiusFromKelvin = (number) => {
     return Math.round(number - 273.15);
   };
-  const planetName = planets[planet].name;
-  const planetDescription = planets[planet].description;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
+  const [planets, setPlanets] = useState([]);
+  const [introduction, setIntroduction] = useState({});
   const [characteristics, setCharacteristics] = useState({});
   const [images, setImages] = useState([]);
+  const planetName = introduction.title || "";
+  const planetDescription = introduction.description || "";
   const currentPlanetUCFirst =
     currentPlanet[0].toUpperCase() + currentPlanet.slice(1);
   if (currentPlanet !== planet) setCurrentPlanet(planet);
   useEffect(() => {
     if (images) setImages([]);
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/planets`)
+      .then((response) => response.json())
+      .then((data) => setPlanets(data))
+      .catch((error) => console.error(error));
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/planets/${currentPlanet}`)
+      .then((response) => response.json())
+      .then((data) => setIntroduction(data))
+      .catch((error) => console.error(error));
     fetch(
       `https://images-api.nasa.gov/search?q=${currentPlanet}&media_type=image&center=JPL`
     )
@@ -114,30 +123,37 @@ function Planet() {
                 <dt>Rayon équatorial</dt>
                 <dd>{displayNumber(characteristics.equaRadius)}&nbsp;km</dd>
                 <dt>Rayon polaire</dt>
-                <dd>{displayNumber(characteristics.polarRadius)}&nbsp;km</dd>
+                <dd>
+                  {displayNumber(characteristics.polarRadius)}
+                  &nbsp;km
+                </dd>
                 <dt>Rayon moyen volumétrique</dt>
                 <dd>{displayNumber(characteristics.meanRadius)}&nbsp;km</dd>
                 <dt>Aplatissement</dt>
                 <dd>{displayNumber(characteristics.flattening)}</dd>
                 <dt>Volume</dt>
                 <dd>
-                  {displayNumber(characteristics.vol.volValue)}&nbsp;×&nbsp;10
+                  {displayNumber(characteristics.vol.volValue)}
+                  &nbsp;×&nbsp;10
                   <sup>{displayNumber(characteristics.vol.volExponent)}</sup>
                   &nbsp;km<sup>3</sup>
                 </dd>
                 <dt>Masse</dt>
                 <dd>
-                  {displayNumber(characteristics.mass.massValue)}&nbsp;×&nbsp;10
+                  {displayNumber(characteristics.mass.massValue)}
+                  &nbsp;×&nbsp;10
                   <sup>{displayNumber(characteristics.mass.massExponent)}</sup>
                   &nbsp;kg
                 </dd>
                 <dt>Masse volumique globale</dt>
                 <dd>
-                  {displayNumber(characteristics.density)}&nbsp;t/m<sup>3</sup>
+                  {displayNumber(characteristics.density)}
+                  &nbsp;t/m<sup>3</sup>
                 </dd>
                 <dt>Gravité de surface</dt>
                 <dd>
-                  {displayNumber(characteristics.gravity)}&nbsp;m/s<sup>2</sup>
+                  {displayNumber(characteristics.gravity)}
+                  &nbsp;m/s<sup>2</sup>
                 </dd>
                 <dt>Vitesse de libération</dt>
                 <dd>{displayNumber(characteristics.escape)}&nbsp;m/s</dd>
@@ -182,14 +198,14 @@ function Planet() {
         )}
         <nav className="other-planets">
           <ul>
-            {Object.keys(planets)
-              .filter((item) => item !== planet)
+            {planets
+              .filter((item) => item.name_id !== planet)
               .map((anotherPlanet) => {
+                const nameId = anotherPlanet.name_id;
+                const name = anotherPlanet.title;
                 return (
-                  <li key={anotherPlanet}>
-                    <Link to={`/planet/${anotherPlanet}`}>
-                      {planets[anotherPlanet].name}
-                    </Link>
+                  <li key={nameId}>
+                    <Link to={`/planet/${nameId}`}>{name}</Link>
                   </li>
                 );
               })}
