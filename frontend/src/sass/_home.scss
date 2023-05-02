@@ -114,7 +114,10 @@
     img + img {
       border-radius: 50%;
     }        
-  }          
+  }         
+  @media (min-height: 1000px){
+    min-height: 87vh;
+  } 
 }
 
 
