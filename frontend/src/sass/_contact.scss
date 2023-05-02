@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 77vh;
   width: 100vw;
   padding-bottom: 4rem;
 
@@ -25,7 +25,7 @@
       max-width: 1000px;
     }
     @media screen and (min-width: 950px) {
-        height: 80vh;
+        height: 77vh;
         width: 80vw;
     }
 
@@ -230,6 +230,11 @@
         }
     }
   }
-
  
+ 
+}
+@media screen and (min-width: 950px){
+  .contact-page{
+    padding-bottom: 1rem;
+  }
 }
