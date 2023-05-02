@@ -5,12 +5,15 @@ function TeamCard({ profil }) {
   return (
     <div className="card-machaunaut-container">
       <div className="picture-profil-container">
-        <img src={imgProfil} alt="" />
-        <h1>{profil.firstName}</h1>
-        <h2>{profil.title}</h2>
+        <img src={imgProfil} alt="logo astronaut" />
+        <h2>
+          {`${profil.firstName}    
+          ${profil.lastName}`}
+        </h2>
+        <h3>{profil.title}</h3>
       </div>
       <div className="caracteristique-infos-container">
-        <p>{profil.desciption}</p>
+        <p>{profil.description}</p>
       </div>
       <div className="icons-container">
         <a href={profil.github} target="blank">

@@ -1,0 +1,16 @@
+.rockets-container-global{
+    max-width: 130rem;
+    color: var(--primary-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    h1{
+        font-size: 3.6rem;
+        margin-bottom: 3rem;
+    }
+}
+

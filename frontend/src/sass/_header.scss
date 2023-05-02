@@ -8,3 +8,9 @@
         width: 10rem;
     }
 }
+
+@media screen and (min-width:600px) {
+    .header-container{
+        height: 17rem;
+    }
+}

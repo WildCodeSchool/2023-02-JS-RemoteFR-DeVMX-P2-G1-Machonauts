@@ -1,225 +1,240 @@
 .contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 77vh;
+  width: 100vw;
+  padding-bottom: 4rem;
 
-    .contact-form {
+  .contact-form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 0rem;
+    height: 60vh;
+    width: 100%;
+    background: rgba(217, 217, 217, 0.045);
+    box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25),
+      inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
+    border-radius: 56px;
+    @media screen and (min-width: 650px) {
+      height: 80vh;
+      width: 85vw;
+      max-width: 1000px;
+    }
+    @media screen and (min-width: 950px) {
+        height: 77vh;
+        width: 80vw;
+    }
+
+
+    .send-form-off {
+      display: none;
+    }
+
+    .send-form-on {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      position: absolute;
+      height: 78vh;
+      width: 95vw;
+      color: #d8d3d3;
+      font-size: 1.7rem;
+      background: rgba(217, 217, 217, 0.863);
+      box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25),
+        inset 0 4px 25px 2px rgba(88, 76, 221, 0.35);
+      border-radius: 56px;
+      background-image: url("https://images-assets.nasa.gov/image/PIA13532/PIA13532~thumb.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media screen and (min-width: 650px) {
+          height: 60vh;
+          width: 65vw;
+      }
+      @media screen and (min-width: 950px) {
+          height: 60vh;
+          max-width: 55vw;
+          font-size: 2rem;
+        }  
+
+      .send-container {
+        border-radius: 1rem;
         display: flex;
+        align-items: center;
+        height: 30rem;
         justify-content: space-around;
         flex-direction: column;
-        align-items: center;
-        align-content: center;
-        height: 90vh;
-        width: 90vw;
-        background: rgba(217, 217, 217, 0.045);
-        box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
-        border-radius: 56px;
-
-
-        .send-form-off {
-            display: none;
-
+        background: rgba(30, 29, 29, 0.29);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        padding : 1.5rem;
+        @media screen and (min-width: 650px) {
+          width: 40vw;
         }
 
-        .send-form-on {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            // background-image: image de lune ? ;
-            position: absolute;
-            height: 60vh;
-            width: 75vw;
-            color: #190101;
-            font-size: 1.7rem;
-            background: rgba(217, 217, 217, 0.954);
-            box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25), inset 0 4px 78px 2px rgba(88, 76, 221, 0.35);
-            border-radius: 56px;
+        p {
+          text-align: center;
+          font-size: 2rem;
+          @media screen and (min-width: 650px) {
+              font-size: 2.5rem;}
+        }
 
-            .buttonSend {
-                border: none;
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
-                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border: #d9d9d9 solid 1.5px;
-                width: 25rem;
-                height: 3.5rem;
-                transition-duration: all 0.4s;
-                color: #d9d9d9;
-                font-size: 1.7rem;
-                border-radius: 1rem;
-                border: 0;
-                color: #190101;
-
+        .buttonSend {
+          width: 40vw;
+          border: none;
+          background: rgba(145, 146, 153, 0.35);
+          border-radius: 1rem;
+          box-shadow: 0 9px 10px rgba(10, 9, 9, 0.1),
+            inset 0 1px 15px 0px rgba(52, 50, 69, 0.35);
+          backdrop-filter: blur(12.6px);
+          transition-duration: all 0.4s;
+          color: #d9d9d9;
+          font-size: 1.7rem;
+          color: #190101;
+          &:hover {
+            background: linear-gradient(188deg, #350278, #1b038e);
+            color: white;
+          }
+          @media screen and (min-width: 650px) {
+              width: 25rem;
+              height: 3.5rem;
             }
-        }
-
-        .input {
-            height: 5rem;
-            width: 30rem;
-            background-color: #d9d9d948;
-            border-color: none;
-            border-radius: 1rem;
-            border: 0;
-            color: #d9d9d9;
-            padding-left: 1rem;
-            font-size: 1.7rem;
-
-            &::placeholder {
-                color: #d9d9d9;
-                padding-left: 1rem;
-            }
-        }
-
-        .textaera {
-            height: 20rem;
-            width: 30rem;
-            background-color: #d9d9d948;
-            border-radius: 1rem;
-            border: 0;
-            color: #d9d9d9;
-            padding-left: 1rem;
-            padding-top: 1rem;
-            font-size: 1.7rem;
-
-            &::placeholder {
-                color: #d9d9d9;
-                padding-left: 1rem;
-                padding-top: 1rem;
-
-            }
-
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            color: #d9d9d9;
-        }
-
-        .buttonContact {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border: #d9d9d9 solid 1.5px;
-            width: 25rem;
+          @media screen and (min-width: 950px){
+            width: 20rem;
             height: 3.5rem;
-            transition-duration: all 0.4s;
-            color: #d9d9d9;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .input {
+      height: 3.5rem;
+      width: 30rem;
+      background-color: #d9d9d948;
+      border-color: none;
+      border-radius: 1rem;
+      border: 0;
+      color: #d9d9d9;
+      padding-left: 1rem;
+      font-size: 1.7rem;
+      &::placeholder {
+        color: #d9d9d9;
+        padding-left: 1rem;
+      }
+      @media screen and (min-width: 650px) {
+          height: 5rem;
+          width: 50rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
             font-size: 1.7rem;
-            border-radius: 1rem;
-            border: 0;
-            background-color: #d9d9d948;
-
-            &:hover {
-                background: linear-gradient(188deg, #350278, #1b038e);
-                color: white;
-            }
-
-
+          }
         }
+        @media screen and (min-width: 950px) {
+            height: 5rem;
+            width: 60rem;
+            font-size: 1.7rem;
+    
+            &::placeholder {
+              font-size: 1.7rem;
+            }
+          }
     }
 
-    @media screen and (min-width: 650px) {
-        .contact-form {
-            height: 80vh;
-            width: 85vw;
-            max-width: 1000px;
+    .textaera {
+      height: 15rem;
+      width: 30rem;
+      background-color: #d9d9d948;
+      border-radius: 1rem;
+      border: 0;
+      color: #d9d9d9;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      font-size: 1.7rem;
 
-            .send-form-on {
-                height: 60vh;
-                width: 65vw;
-
-                .buttonSend {
-                    width: 25rem;
-                    height: 3.5rem;
-
-                }
-            }
-
-            .buttonContact {
-                font-size: 1.7rem;
-
-                &:hover {
-                    background: linear-gradient(188deg, #350278, #1b038e);
-                    color: white;
-                }
-
-            }
-
-            .input {
-                height: 5rem;
-                width: 50rem;
-                font-size: 1.7rem;
-
-                &::placeholder {
-                    font-size: 1.7rem;
-                }
-
-            }
-
-            .textaera {
-                height: 20rem;
-                width: 50rem;
-                font-size: 1.7rem;
-
-                &::placeholder {
-                    font-size: 1.7rem;
-                }
-            }
-
-            h1 {
-                font-size: 5rem;
-            }
-
-            .buttonContact {
-                height: 4rem;
-                width: 40rem;
-            }
-
-
+      &::placeholder {
+        color: #d9d9d9;
+        padding-left: 1rem;
+        padding-top: 1rem;
+      }
+      @media screen and (min-width: 650px) {
+          height: 20rem;
+          width: 50rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
+            font-size: 1.7rem;
+          }
         }
+        @media screen and (min-width: 950px) {
+            height: 20rem;
+            width: 60rem;
+            font-size: 1.7rem;
+    
+            &::placeholder {
+              font-size: 1.7rem;
+            }
+          }
     }
 
-    @media screen and (min-width: 950px) {
-        .contact-form {
-            height: 80vh;
-            width: 80vw;
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-            .send-form-on {
-                height: 60vh;
-                max-width: 50vw;
-                font-size: 2rem;
-                
+    h1 {
+      font-size: 3.5rem;
+      color: #d9d9d9;
+      @media screen and (min-width: 650px) {
+         font-size: 5rem;
+      }}
 
-                .buttonSend {
-                    width: 25rem;
-                    height: 3.5rem;
-                    font-size: 2rem;
+      .buttonContact {
+        height: 4rem;
+        width: 40rem;
+    }
 
-                }
-            }
+    .buttonContact {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: #d9d9d9 solid 1.5px;
+      width: 25rem;
+      height: 3.5rem;
+      transition-duration: all 0.4s;
+      color: #d9d9d9;
+      font-size: 1.7rem;
+      border-radius: 1rem;
+      border: 0;
+      background-color: #d9d9d948;
 
-            .input {
-                height: 5rem;
-                width: 60rem;
-                font-size: 1.7rem;
+      &:hover {
+        background: linear-gradient(188deg, #350278, #1b038e);
+        color: white;
+      }
 
-                &::placeholder {
-                    font-size: 1.7rem;
-                }
-
-            }
-
-            .textaera {
-                height: 20rem;
-                width: 60rem;
-                font-size: 1.7rem;
-
-                &::placeholder {
-                    font-size: 1.7rem;
-                }
-            }
+      @media screen and (min-width: 650px) {
+          font-size: 1.7rem;
+  
+          &:hover {
+            background: linear-gradient(188deg, #350278, #1b038e);
+            color: white;
+          }
         }
     }
+  }
+ 
+ 
+}
+@media screen and (min-width: 950px){
+  .contact-page{
+    padding-bottom: 1rem;
+  }
 }
