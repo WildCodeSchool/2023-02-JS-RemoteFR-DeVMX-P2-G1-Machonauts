@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import { TextureLoader } from "three";
