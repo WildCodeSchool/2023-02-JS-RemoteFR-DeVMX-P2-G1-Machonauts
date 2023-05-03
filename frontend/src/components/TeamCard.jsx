@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import imgProfil from "../assets/Monaut.svg";
 
 function TeamCard({ profil }) {
@@ -30,4 +30,7 @@ function TeamCard({ profil }) {
   );
 }
 
+TeamCard.propTypes = {
+  profil: PropTypes.string.isRequired,
+};
 export default TeamCard;

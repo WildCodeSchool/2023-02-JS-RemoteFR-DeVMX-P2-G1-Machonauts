@@ -1,11 +1,13 @@
+/* eslint-disable react/no-unknown-property */
 import { useRef } from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { TextureLoader } from "three";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import EarthClouds from "./EarthClouds";
 
-function Planets({ planet, name, Texture, posX, cshadow, rshadow,spinspeed }) {
+function Planets({ planet, name, Texture, posX, cshadow, rshadow }) {
   const planetsMesh = useRef();
   const textureplanet = useLoader(TextureLoader, Texture);
 
@@ -20,7 +22,6 @@ function Planets({ planet, name, Texture, posX, cshadow, rshadow,spinspeed }) {
       planetsMesh.current.rotation.y = a / 6;
 
       planetsMesh.current.rotation.z = 0.4;
-    
     }
   });
 
@@ -50,5 +51,12 @@ function Planets({ planet, name, Texture, posX, cshadow, rshadow,spinspeed }) {
     </>
   );
 }
-
+Planets.propTypes = {
+  planet: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  Texture: PropTypes.string.isRequired,
+  posX: PropTypes.number.isRequired,
+  cshadow: PropTypes.bool.isRequired,
+  rshadow: PropTypes.bool.isRequired,
+};
 export default Planets;

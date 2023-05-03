@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 import { TextureLoader, DoubleSide } from "three";
@@ -20,6 +21,7 @@ function EarthClouds() {
       <sphereGeometry args={[1.008, 32, 32]} attach="geometry" />
       <meshPhongMaterial
         alphaMap={clouds}
+        // eslint-disable-next-line react/jsx-boolean-value
         transparent={true}
         attach="material"
         side={DoubleSide}

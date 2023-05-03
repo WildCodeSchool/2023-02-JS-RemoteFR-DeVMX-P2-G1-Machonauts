@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 import planets from "../datas/planets";
@@ -10,9 +11,9 @@ function Immersive() {
   const [zoom, setZoom] = useState();
 
   useEffect(() => {
-    if (window.innerWidth > 1920) {
-      setZoom(80);
-    } else if (window.innerWidth > 1200 && window.innerWidth <= 1920) {
+    if (window.innerWidth >= 1920) {
+      setZoom(65);
+    } else if (window.innerWidth > 1200 && window.innerWidth < 1920) {
       setZoom(45);
     } else if (window.innerWidth >= 1024 && window.innerWidth <= 1200) {
       setZoom(35);
