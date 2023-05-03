@@ -63,25 +63,23 @@ function Planet() {
       <Header />
 
       <article className={`planet ${planet}`}>
-        <h1>
-          <div className="planets">
-            <Canvas
-              camera={{
-                zoom: 38,
-                position: [0, 10, 50],
-                fov: 76,
-                near: 0.1,
-                far: 1000,
-              }}
-            >
-              <ambientLight intensity={0.4} />
-              <pointLight position={[-50, 30, 60]} intensity={2} />
-              <PlanetModal name={planetName} Texture={planeTexture} />
-              {planetName === "Terre" && <EarthClouds />}
-            </Canvas>
-            {planetName}
-          </div>
-        </h1>
+        <div className="planets">
+          <Canvas
+            camera={{
+              zoom: 38,
+              position: [0, 10, 50],
+              fov: 76,
+              near: 0.1,
+              far: 1000,
+            }}
+          >
+            <ambientLight intensity={0.4} />
+            <pointLight position={[-50, 30, 60]} intensity={2} />
+            <PlanetModal name={planetName} Texture={planeTexture} />
+            {planetName === "Terre" && <EarthClouds />}
+          </Canvas>
+          <h1>{planetName}</h1>
+        </div>
         <p>{planetDescription}</p>
         {Object.keys(characteristics).length && (
           <>
