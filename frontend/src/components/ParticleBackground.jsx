@@ -6,12 +6,11 @@ import data from "../datas/ParticlesConfig";
 
 function ParticleBackground() {
   const particlesInit = useCallback(async (engine) => {
-    console.info(engine);
     await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.info(container);
+    await container;
   }, []);
 
   return (
