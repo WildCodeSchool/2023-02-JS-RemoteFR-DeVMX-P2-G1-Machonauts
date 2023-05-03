@@ -19,7 +19,8 @@
 @media screen and (min-width: 600px) {
   .rocket-container-home {
     display: block;
-    position: relative;
+    position: absolute;
+    z-index: 1;
     margin-bottom: 0rem;
 
     .rocket-img {
@@ -227,8 +228,8 @@
 
 .bonus-star {
   background-color: rgb(247, 84, 84);
-  height: 0.3rem;
-  width: 0.3rem;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 100px;
   position: absolute;
   top: 37%;
@@ -241,6 +242,7 @@
   animation-name: clignoter;
   animation-iteration-count: infinite;
   transition: none;
+
 
   @keyframes clignoter {
     0% {
@@ -259,15 +261,16 @@
 
 .switch-immersive {
   display: none;
-  background-color: white;
-  height: 7rem;
-  width: 30rem;
+  background-color: rgba(255, 255, 255, 0.375);
+  height: 3rem;
+  width: 10rem;
   border-radius: 10px;
   position: absolute;
-  top: 75vh;
-  left: 45vw;
+  z-index: 2;
+  top: 4vh;
+  right: 2vw;
   font-size: var(--input-size);
-  @media screen and (min-width: 1900px) {
+  @media screen and (min-width: 1280px){
     display: block;
   }
 }
