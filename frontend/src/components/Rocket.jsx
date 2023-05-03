@@ -15,7 +15,7 @@ Rocket.propTypes = {
   src: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  alt: PropTypes.number.isRequired,
+  alt: PropTypes.string.isRequired,
 };
 
 export default Rocket;
