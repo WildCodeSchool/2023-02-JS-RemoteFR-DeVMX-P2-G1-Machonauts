@@ -22,7 +22,6 @@ function App() {
           <Route path="/a-propos" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home-immersive" element={<Immersive />} />
-
         </Routes>
       </BrowserRouter>
     </div>

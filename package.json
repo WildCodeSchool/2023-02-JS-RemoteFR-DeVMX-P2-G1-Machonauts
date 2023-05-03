@@ -31,8 +31,11 @@
     "husky": "^8.0.3"
   },
   "dependencies": {
+    "@react-three/drei": "^9.66.1",
+    "@react-three/fiber": "^8.13.0",
     "react-router-dom": "^6.10.0",
     "react-tsparticles": "^2.9.3",
+    "three": "^0.152.2",
     "tsparticles": "^2.9.3"
   }
 }
