@@ -1,4 +1,4 @@
-import profils from "../datas/data-infos-profils";
+import profiles from "../datas/data-infos-profiles";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TeamCard from "../components/TeamCard";
@@ -27,8 +27,19 @@ function About() {
         <div className="team-infos-container">
           <h1>Notre équipe</h1>
           <div className="team-cards-container">
-            {profils.map((profil) => {
-              return <TeamCard profil={profil} key={profil.id} />;
+            {profiles.map((profile) => {
+              return (
+                <TeamCard
+                  key={profile.id}
+                  firstName={profile.firstName}
+                  lastName={profile.lastName}
+                  title={profile.title}
+                  description={profile.description}
+                  github={profile.github}
+                  linkedin={profile.linkedin}
+                  mail={profile.mail}
+                />
+              );
             })}
           </div>
         </div>
