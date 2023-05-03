@@ -18,7 +18,7 @@ function Sun() {
 
   return (
     <mesh ref={sunMesh} rotation={[0, 0, 0]} position={[-18, 0, 0]}>
-      <sphereGeometry attach="geometry" args={[6.5, 64, 64]} />
+      <sphereGeometry attach="geometry" args={[6, 64, 64]} />
       <meshBasicMaterial attach="material" map={sun} />
     </mesh>
   );
