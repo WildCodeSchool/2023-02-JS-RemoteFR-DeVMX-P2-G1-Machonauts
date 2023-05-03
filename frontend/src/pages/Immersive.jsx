@@ -42,7 +42,7 @@ function Immersive() {
             key={planet}
             planet={planet}
             name={planets[planet].name}
-            Texture={planets[planet].Texture}
+            texture={planets[planet].texture}
             posX={planets[planet].posX}
             cshadow={planets[planet].cshadow}
             rshadow={planets[planet].rshadow}

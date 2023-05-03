@@ -6,7 +6,6 @@ import Clouds from "../assets/planets-surface/earth_clouds.jpg";
 
 function EarthClouds() {
   const cloudMesh = useRef();
-
   const clouds = useLoader(TextureLoader, Clouds);
 
   useFrame(({ clock }) => {

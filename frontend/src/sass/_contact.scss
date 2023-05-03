@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 77vh;
-  width: 100vw;
+  //width: 100vw;
   padding-bottom: 4rem;
 
   .contact-form {
@@ -25,10 +25,9 @@
       max-width: 1000px;
     }
     @media screen and (min-width: 950px) {
-        height: 77vh;
-        width: 80vw;
+      height: 77vh;
+      width: 80vw;
     }
-
 
     .send-form-off {
       display: none;
@@ -53,14 +52,14 @@
       background-size: cover;
       background-repeat: no-repeat;
       @media screen and (min-width: 650px) {
-          height: 60vh;
-          width: 65vw;
+        height: 60vh;
+        width: 65vw;
       }
       @media screen and (min-width: 950px) {
-          height: 60vh;
-          max-width: 55vw;
-          font-size: 2rem;
-        }  
+        height: 60vh;
+        max-width: 55vw;
+        font-size: 2rem;
+      }
 
       .send-container {
         border-radius: 1rem;
@@ -73,7 +72,7 @@
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
-        padding : 1.5rem;
+        padding: 1.5rem;
         @media screen and (min-width: 650px) {
           width: 40vw;
         }
@@ -82,7 +81,8 @@
           text-align: center;
           font-size: 2rem;
           @media screen and (min-width: 650px) {
-              font-size: 2.5rem;}
+            font-size: 2.5rem;
+          }
         }
 
         .buttonSend {
@@ -102,10 +102,10 @@
             color: white;
           }
           @media screen and (min-width: 650px) {
-              width: 25rem;
-              height: 3.5rem;
-            }
-          @media screen and (min-width: 950px){
+            width: 25rem;
+            height: 3.5rem;
+          }
+          @media screen and (min-width: 950px) {
             width: 20rem;
             height: 3.5rem;
             font-size: 2rem;
@@ -129,23 +129,23 @@
         padding-left: 1rem;
       }
       @media screen and (min-width: 650px) {
-          height: 5rem;
-          width: 50rem;
+        height: 5rem;
+        width: 50rem;
+        font-size: 1.7rem;
+
+        &::placeholder {
           font-size: 1.7rem;
-  
-          &::placeholder {
-            font-size: 1.7rem;
-          }
         }
-        @media screen and (min-width: 950px) {
-            height: 5rem;
-            width: 60rem;
-            font-size: 1.7rem;
-    
-            &::placeholder {
-              font-size: 1.7rem;
-            }
-          }
+      }
+      @media screen and (min-width: 950px) {
+        height: 5rem;
+        width: 60rem;
+        font-size: 1.7rem;
+
+        &::placeholder {
+          font-size: 1.7rem;
+        }
+      }
     }
 
     .textaera {
@@ -165,23 +165,23 @@
         padding-top: 1rem;
       }
       @media screen and (min-width: 650px) {
-          height: 20rem;
-          width: 50rem;
+        height: 20rem;
+        width: 50rem;
+        font-size: 1.7rem;
+
+        &::placeholder {
           font-size: 1.7rem;
-  
-          &::placeholder {
-            font-size: 1.7rem;
-          }
         }
-        @media screen and (min-width: 950px) {
-            height: 20rem;
-            width: 60rem;
-            font-size: 1.7rem;
-    
-            &::placeholder {
-              font-size: 1.7rem;
-            }
-          }
+      }
+      @media screen and (min-width: 950px) {
+        height: 20rem;
+        width: 60rem;
+        font-size: 1.7rem;
+
+        &::placeholder {
+          font-size: 1.7rem;
+        }
+      }
     }
 
     label {
@@ -194,12 +194,13 @@
       font-size: 3.5rem;
       color: #d9d9d9;
       @media screen and (min-width: 650px) {
-         font-size: 5rem;
-      }}
+        font-size: 5rem;
+      }
+    }
 
-      .buttonContact {
-        height: 4rem;
-        width: 40rem;
+    .buttonContact {
+      height: 4rem;
+      width: 40rem;
     }
 
     .buttonContact {
@@ -221,20 +222,18 @@
       }
 
       @media screen and (min-width: 650px) {
-          font-size: 1.7rem;
-  
-          &:hover {
-            background: linear-gradient(188deg, #350278, #1b038e);
-            color: white;
-          }
+        font-size: 1.7rem;
+
+        &:hover {
+          background: linear-gradient(188deg, #350278, #1b038e);
+          color: white;
         }
+      }
     }
   }
- 
- 
 }
-@media screen and (min-width: 950px){
-  .contact-page{
+@media screen and (min-width: 950px) {
+  .contact-page {
     padding-bottom: 1rem;
   }
 }

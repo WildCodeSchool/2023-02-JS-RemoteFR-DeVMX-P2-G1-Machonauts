@@ -6,7 +6,6 @@ import rocket from "../assets/rocket-logo.webp";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
-
   const navigate = useNavigate();
   function immersive() {
     navigate("/home-immersive");
@@ -39,11 +38,11 @@ function Home() {
               <img
                 src="../src/assets/planets-surface/venus.jpg"
                 className="planet-img venus"
-                alt="Venus"
+                alt="Vénus"
               />
             </Link>
             <div className="planet-name">
-              <h1>Venus</h1>
+              <h1>Vénus</h1>
             </div>
           </div>
           <div className="planets-pic">
@@ -134,7 +133,7 @@ function Home() {
         {" "}
       </button>
       <button type="button" className="switch-immersive" onClick={immersive}>
-        Click here to begin a new journey !
+        2D / 3D
       </button>
       <Footer />
     </>

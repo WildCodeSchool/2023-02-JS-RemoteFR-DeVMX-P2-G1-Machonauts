@@ -10,28 +10,24 @@ function Contact() {
   const [changeClass, setChangeClass] = useState("send-form-off");
   const disable = document.getElementById("button_contact");
 
-  /* Validation Form*************************** */
-
   function submit(e) {
     e.preventDefault();
     setChangeClass("send-form-on");
     disable.disabled = "disabled";
   }
 
-  /* Form **************************** */
-
   return (
     <>
       <Header />
       <div className="contact-page">
         <form className="contact-form" id="my_Form" onSubmit={submit}>
-          <h1 className="h1-Contact">Contact Us</h1>
+          <h1 className="h1-Contact">Contactez-nous</h1>
           <label>
             <input
               id="first_Name"
               className="input"
               type="text"
-              placeholder="First Name"
+              placeholder="Prénom"
               value={firstName}
               onChange={(e) => {
                 setFirstName(e.target.value);
@@ -44,7 +40,7 @@ function Contact() {
               id="last_Name"
               className="input"
               type="text"
-              placeholder="Last Name"
+              placeholder="Nom"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               required
@@ -62,22 +58,22 @@ function Contact() {
             />
           </label>
           <textarea
-            id="text_area"
+            id="text_Area"
             className="textaera"
-            placeholder="Enter your message here :"
+            placeholder="Saisissez votre message"
             onChange={(e) => setMessage(e.target.value)}
             value={message}
             required
           />
 
-          <button className="buttonContact" id="button_contact" type="submit">
-            Send
+          <button className="buttonContact" id="button_Contact" type="submit">
+            Envoyer
           </button>
 
-          <div id="send_form" className={changeClass}>
+          <div id="send_Form" className={changeClass}>
             <div className="send-container">
               <p>Demande transmise</p>
-              <p>See you in space, Cowboy !</p>
+              <p lang="en">See you in space, Cowboy !</p>
               <button
                 className="buttonSend"
                 type="button"
