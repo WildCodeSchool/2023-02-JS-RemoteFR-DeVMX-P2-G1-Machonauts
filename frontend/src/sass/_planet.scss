@@ -157,3 +157,9 @@ $planet-colours: (
         margin-left: auto;
     }
 }
+.planets{
+    display: flex;
+    flex-direction: column;
+    width:35rem ;
+    height: 35rem;
+   }
