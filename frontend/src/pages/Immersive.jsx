@@ -35,7 +35,7 @@ function Immersive() {
         }}
       >
         <ambientLight position={[0, 0, 0]} intensity={0.04} />
-        <pointLight position={[22, 0, 0]} intensity={2.2} scale={5} />
+        <pointLight position={[-22, 0, 0]} intensity={2.2} scale={5} />
         <Sun />
         {Object.keys(planets).map((planet) => (
           <Planets
