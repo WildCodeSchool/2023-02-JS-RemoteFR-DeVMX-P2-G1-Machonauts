@@ -29,7 +29,7 @@ function Planets({ planet, name, texture, posX, cshadow, rshadow }) {
         ref={planetsMesh}
         castShadow={cshadow}
         receiveShadow={rshadow}
-        rotation={[0, Math.PI / 8, 0]}
+        rotation={[0, 0, 0]}
         position={[posX, 0, 0]}
         onClick={planetLink}
       >
