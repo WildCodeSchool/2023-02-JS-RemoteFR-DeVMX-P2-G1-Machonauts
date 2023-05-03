@@ -3,13 +3,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TeamCard from "../components/TeamCard";
 
-function AboutUs() {
+function About() {
   return (
     <>
       <Header />
-      <div className="aboutUs-container-global">
+      <div className="about-container-global">
         <div className="entreprise-infos-container">
-          <h1>Qui sommes nous</h1>
+          <h1>Qui sommes-nous&nbsp;?</h1>
           <p>
             SpaceMX est une société innovante spécialisée dans la création de
             sites web axés sur l'espace. Fondée par des experts en technologie
@@ -20,7 +20,7 @@ function AboutUs() {
             que pour les éducateurs et les étudiants. En fournissant des
             informations précises et fiables sur l'univers, SpaceMX vise à
             inspirer la prochaine génération de scientifiques et d'explorateurs
-            de l'espace
+            de l'espace.
           </p>
         </div>
 
@@ -38,4 +38,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default About;

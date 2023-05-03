@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .rocket-container-home {
     display: block;
     position: relative;
@@ -140,11 +140,11 @@
       --s: 0px;
       --b: 0px;
       --g: 12px;
-      --c: #4ECDC4;
+      --c: #4ecdc4;
 
       width: var(--s);
       aspect-ratio: 1;
-      outline: calc(var(--s)/2) solid #0009;
+      outline: calc(var(--s) / 2) solid #0009;
       cursor: pointer;
       transition: 3s;
     }
@@ -155,7 +155,7 @@
       transform: rotate(360deg);
     }
 
-    img+img {
+    img + img {
       border-radius: 50%;
     }
   }
@@ -173,11 +173,6 @@
     }
   }
 }
-
-
-
-
-
 
 #root {
   min-height: 100vh;
@@ -240,7 +235,8 @@
   left: 28%;
   filter: blur(5px);
   filter: saturate(75%);
-  box-shadow: 0px 0px 150px 11px rgb(227, 214, 165), inset 0px 0px 50px 12px rgb(243, 89, 89);
+  box-shadow: 0px 0px 150px 11px rgb(227, 214, 165),
+    inset 0px 0px 50px 12px rgb(243, 89, 89);
   animation-duration: 7s;
   animation-name: clignoter;
   animation-iteration-count: infinite;
@@ -259,11 +255,10 @@
       opacity: 1;
     }
   }
-
 }
 
 .switch-immersive {
-  display:none;
+  display: none;
   background-color: white;
   height: 7rem;
   width: 30rem;
@@ -272,9 +267,7 @@
   top: 75vh;
   left: 45vw;
   font-size: var(--input-size);
-  @media screen and (min-width: 1900px){
+  @media screen and (min-width: 1900px) {
     display: block;
-  };
-  
-
+  }
 }

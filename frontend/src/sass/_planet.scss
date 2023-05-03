@@ -3,187 +3,215 @@
 
 /* Planet */
 $planet-colours: (
-    mercury: (rgba(91, 91, 91, 0.25), rgba(91, 91, 91, 0.35)),
-    venus: (rgba(233, 174, 73, 0.25), rgba(233, 174, 73, 0.35)),
-    earth: (rgba(30, 58, 117, 0.25), rgba(30, 58, 117, 0.35)),
-    mars: (rgba(223, 100, 59, 0.25), rgba(223, 100, 59, 0.35)),
-    jupiter: (rgba(164, 171, 166, 0.25), rgba(164, 171, 166, 0.35)),
-    saturn: (rgba(225, 194, 154, 0.25), rgba(225, 194, 154, 0.35)),
-    uranus: (rgba(164, 212, 220, 0.25), rgba(164, 212, 220, 0.35)),
-    neptune: (rgba(74, 139, 223, 0.25), rgba(74, 139, 223, 0.35)),
+  mercury: (
+    rgba(91, 91, 91, 0.25),
+    rgba(91, 91, 91, 0.35),
+  ),
+  venus: (
+    rgba(233, 174, 73, 0.25),
+    rgba(233, 174, 73, 0.35),
+  ),
+  earth: (
+    rgba(30, 58, 117, 0.25),
+    rgba(30, 58, 117, 0.35),
+  ),
+  mars: (
+    rgba(223, 100, 59, 0.25),
+    rgba(223, 100, 59, 0.35),
+  ),
+  jupiter: (
+    rgba(164, 171, 166, 0.25),
+    rgba(164, 171, 166, 0.35),
+  ),
+  saturn: (
+    rgba(225, 194, 154, 0.25),
+    rgba(225, 194, 154, 0.35),
+  ),
+  uranus: (
+    rgba(164, 212, 220, 0.25),
+    rgba(164, 212, 220, 0.35),
+  ),
+  neptune: (
+    rgba(74, 139, 223, 0.25),
+    rgba(74, 139, 223, 0.35),
+  ),
 );
 .planet {
-    font-size: var(--paragraph-size);
-    color: var(--primary-colour);
-    background: rgba(217, 217, 217, 0.06);
-    padding: 1.8rem;
-    margin: 1.2rem;
-    border-radius: 2.2rem;
-    box-shadow: 0 4px 53px 21px rgba(255, 255, 255, 0.25), inset 0 4px 78px 2px rgba(255, 255, 255, 0.35);
-    @each $planet, $colours in $planet-colours {
-        &.#{$planet} {
-            box-shadow: 0 4px 53px 21px #{list.nth($colours, 1)}, inset 0 4px 78px 2px #{list.nth($colours, 2)};
-        }
+  font-size: var(--paragraph-size);
+  color: var(--primary-colour);
+  background: rgba(217, 217, 217, 0.06);
+  padding: 1.8rem;
+  margin: 1.2rem;
+  border-radius: 2.2rem;
+  box-shadow: 0 4px 53px 21px rgba(255, 255, 255, 0.25),
+    inset 0 4px 78px 2px rgba(255, 255, 255, 0.35);
+  @each $planet, $colours in $planet-colours {
+    &.#{$planet} {
+      box-shadow: 0 4px 53px 21px #{list.nth($colours, 1)},
+        inset 0 4px 78px 2px #{list.nth($colours, 2)};
     }
-    section {
-        margin-top: 3rem;
+  }
+  section {
+    margin-top: 3rem;
+  }
+  h1,
+  h2 {
+    font-size: var(--title-size);
+    font-weight: normal;
+  }
+  h1,
+  ul {
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1;
     }
-    h1,
-    h2 {
-        font-size: var(--title-size);
-        font-weight: normal;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1.9rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    list-style: none;
+    margin-top: 2.5rem;
+  }
+  li {
+    margin-top: 1.9rem;
+  }
+  dl {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+    gap: 0 1rem;
+    width: 70vw;
+    margin: 0 auto;
+  }
+  dt,
+  dd {
+    span {
+      display: block;
     }
-    h1,
+  }
+  dd {
+    text-align: end;
+  }
+  .planets {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 25rem;
+    margin: 0 auto;
+  }
+  .other-planets {
     ul {
-        img {
-            border-radius: 50%;
-            object-fit: cover;
-            aspect-ratio: 1;
-        }
-    }
-    h1 {
-        text-align: center;
-        margin-bottom: 1.9rem;
-    }
-    h2 {
-        text-align: center;
-    }
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
-        justify-content: center;
-        list-style: none;
-        margin-top: 2.5rem;
+      gap: 1rem;
     }
     li {
-        margin-top: 1.9rem;
+      margin-top: 0;
+    }
+    a {
+      color: inherit;
+      transition: color 125ms ease-in;
+      &:hover,
+      &:focus {
+        color: white;
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    dl {
+      width: 50vw;
+    }
+  }
+  @media (min-width: 860px) {
+    font-size: var(--paragraph-size-desktop);
+    display: grid;
+    grid-template: repeat(5, auto) / 27rem repeat(2, 1fr);
+    gap: 7rem;
+    padding: 10.4rem 5rem;
+    margin-top: 4.7rem;
+    margin-bottom: 4.7rem;
+    border-radius: 5.6rem;
+    box-shadow: 1px 1px 53px 21px rgba(255, 255, 255, 0.25),
+      inset 0px 4px 78px 2px rgba(255, 255, 255, 0.35);
+    @each $planet, $colours in $planet-colours {
+      &.#{$planet} {
+        box-shadow: 1px 1px 53px 21px #{list.nth($colours, 1)},
+          inset 0px 4px 78px 2px #{list.nth($colours, 2)};
+      }
+    }
+    section {
+      order: 1;
+      margin-top: 0;
+    }
+    h1,
+    h2 {
+      font-size: var(--title-size-desktop);
+    }
+    h1 {
+      margin-bottom: 0;
     }
     dl {
-        display: grid;
-        grid-template: repeat(2, auto) / repeat(2, 1fr);
-        gap: 0 1rem;
-        width: 70vw;
-        margin: 0 auto;
+      width: initial;
     }
-    dt,
-    dd {
-        span {
-            display: block;
-        }
+    ul,
+    li {
+      margin-top: 0;
     }
-    dd {
-        text-align: end;
+    ul {
+      gap: 0.9rem;
+      align-self: flex-start;
+      img {
+        border-radius: initial;
+      }
+    }
+    dl {
+      grid-template-columns: 1fr max-content;
+    }
+    p {
+      grid-column: span 2;
     }
     .planets {
-        display: flex;
-        flex-direction: column;
-        width: 25rem;
-        height: 25rem;
-        margin: 0 auto;
+      align-self: center;
+      width: 30rem;
+      height: 30rem;
     }
     .other-planets {
-        ul {
-            gap: 1rem;
-        }
-        li {
-            margin-top: 0;
-        }
-        a {
-            color: inherit;
-            transition: color 125ms ease-in;
-            &:hover,
-            &:focus {
-                color: white;
-            }
-        }
+      font-size: 3rem;
+      grid-column: 1 / -1;
+      order: -1;
     }
-    @media (min-width: 600px) {
-        dl {
-            width: 50vw;
-        }
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 40rem repeat(2, 1fr);
+    section {
+      justify-self: center;
+      h2,
+      dl {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
-    @media (min-width: 860px) {
-        font-size: var(--paragraph-size-desktop);
-        display: grid;
-        grid-template: repeat(5, auto) / 27rem repeat(2, 1fr);
-        gap: 7rem;
-        padding: 10.4rem 5rem;
-        margin-top: 4.7rem;
-        margin-bottom: 4.7rem;
-        border-radius: 5.6rem;
-        box-shadow: 1px 1px 53px 21px rgba(255, 255, 255, 0.25), inset 0px 4px 78px 2px rgba(255, 255, 255, 0.35);
-        @each $planet, $colours in $planet-colours {
-            &.#{$planet} {
-                box-shadow: 1px 1px 53px 21px #{list.nth($colours, 1)}, inset 0px 4px 78px 2px #{list.nth($colours, 2)};
-            }
-        }
-        section {
-            order: 1;
-            margin-top: 0;
-        }
-        h1,
-        h2 {
-            font-size: var(--title-size-desktop);
-        }
-        h1 {
-            margin-bottom: 0;
-        }
-        dl {
-            width: initial;
-        }
-        ul,
-        li {
-            margin-top: 0;
-        }
-        ul {
-            gap: .9rem;
-            align-self: flex-start;
-            img {
-                border-radius: initial;
-            }
-        }
-        dl {
-            grid-template-columns: 1fr max-content;
-        }
-        p {
-            grid-column: span 2;
-        }
-        .planets {
-            align-self: center;
-            width: 30rem;
-            height: 30rem;
-        }
-        .other-planets {
-            font-size: 3rem;
-            grid-column: 1 / -1;
-            order: -1;
-        }
+    .planets {
+      width: 40rem;
+      height: 40rem;
     }
-    @media (min-width: 1200px) {
-        grid-template-columns: 40rem repeat(2, 1fr);
-        section {
-            justify-self: center;
-            h2,
-            dl {
-                width: 90%;
-                margin: 0 auto;
-            }
-        }
-        .planets {
-            width: 40rem;
-            height: 40rem;
-        }
+  }
+  @media (min-width: 1440px) {
+    --paragraph-size-desktop: 2.4rem;
+    grid-template-columns: 50rem repeat(2, 1fr);
+    p {
+      align-self: center;
     }
-    @media (min-width: 1440px) {
-        --paragraph-size-desktop: 2.4rem;
-        grid-template-columns: 50rem repeat(2, 1fr);
-        p {
-            align-self: center;
-        }
-        .planets {
-            width: 50rem;
-            height: 50rem;
-        }
+    .planets {
+      width: 50rem;
+      height: 50rem;
     }
+  }
 }

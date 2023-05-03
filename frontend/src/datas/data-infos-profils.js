@@ -23,7 +23,7 @@ const profils = [
   },
   {
     id: 3,
-    firstName: "Jean-baptiste",
+    firstName: "Jean-Baptiste",
     lastName: "Noiraud",
     title: "Astronome",
     description:

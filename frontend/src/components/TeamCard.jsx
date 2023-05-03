@@ -12,7 +12,7 @@ function TeamCard({ profil }) {
         </h2>
         <h3>{profil.title}</h3>
       </div>
-      <div className="caracteristique-infos-container">
+      <div className="caracteristics-infos-container">
         <p>{profil.description}</p>
       </div>
       <div className="icons-container">

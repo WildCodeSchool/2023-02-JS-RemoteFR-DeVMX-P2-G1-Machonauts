@@ -4,18 +4,15 @@ import PropTypes from "prop-types";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { OrbitControls } from "@react-three/drei";
-// import { OrbitControls } from "@react-three/drei";
 
-function PlanetModal({ Texture }) {
+function PlanetModal({ texture }) {
   const planetRef = useRef();
-  const textureMap = useLoader(TextureLoader, Texture);
+  const textureMap = useLoader(TextureLoader, texture);
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
     planetRef.current.rotation.y = elapsedTime / 6;
   });
-  console.info(Texture);
-  // console.info(Texture);
   return (
     <>
       <pointLight position={[0, 0, 0]} intensity={1} />
@@ -34,6 +31,6 @@ function PlanetModal({ Texture }) {
   );
 }
 PlanetModal.propTypes = {
-  Texture: PropTypes.string.isRequired,
+  texture: PropTypes.string.isRequired,
 };
 export default PlanetModal;

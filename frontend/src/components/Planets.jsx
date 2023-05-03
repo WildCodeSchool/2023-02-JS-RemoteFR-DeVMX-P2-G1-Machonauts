@@ -7,10 +7,9 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import EarthClouds from "./EarthClouds";
 
-function Planets({ planet, name, Texture, posX, cshadow, rshadow }) {
+function Planets({ planet, name, texture, posX, cshadow, rshadow }) {
   const planetsMesh = useRef();
-  const textureplanet = useLoader(TextureLoader, Texture);
-
+  const texturePlanet = useLoader(TextureLoader, texture);
   const navigate = useNavigate();
   function planetLink() {
     navigate(`/planet/${planet}`);
@@ -18,9 +17,8 @@ function Planets({ planet, name, Texture, posX, cshadow, rshadow }) {
 
   useFrame(({ clock }) => {
     if (planetsMesh.current) {
-      const a = clock.getElapsedTime();
-      planetsMesh.current.rotation.y = a / 6;
-
+      const elapsedTime = clock.getElapsedTime();
+      planetsMesh.current.rotation.y = elapsedTime / 6;
       planetsMesh.current.rotation.z = 0.4;
     }
   });
@@ -36,7 +34,7 @@ function Planets({ planet, name, Texture, posX, cshadow, rshadow }) {
         onClick={planetLink}
       >
         <sphereGeometry attach="geometry" args={[1, 32, 32]} rotateY={0.4} />
-        <meshPhongMaterial attach="material" map={textureplanet} />
+        <meshPhongMaterial attach="material" map={texturePlanet} />
         {name === "Terre" && <EarthClouds />}
       </mesh>
       <Text
@@ -54,7 +52,7 @@ function Planets({ planet, name, Texture, posX, cshadow, rshadow }) {
 Planets.propTypes = {
   planet: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  Texture: PropTypes.string.isRequired,
+  texture: PropTypes.string.isRequired,
   posX: PropTypes.number.isRequired,
   cshadow: PropTypes.bool.isRequired,
   rshadow: PropTypes.bool.isRequired,
