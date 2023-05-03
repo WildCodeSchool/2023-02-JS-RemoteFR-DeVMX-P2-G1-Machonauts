@@ -107,7 +107,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    min-height: 75vh;
+    min-height: 68vh;
     column-gap: 0;
 
     .planet-name h1 {
@@ -153,7 +153,7 @@
   }
 
   @media (min-height: 1000px) {
-    min-height: 87vh;
+    min-height: 72vh;
   }
 }
 
