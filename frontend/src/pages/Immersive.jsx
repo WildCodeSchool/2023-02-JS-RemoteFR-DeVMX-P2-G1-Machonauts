@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas } from "@react-three/fiber";
-import { ScrollControls } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import planets from "../datas/planets";
 import Planets from "../components/Planets";
@@ -34,23 +33,21 @@ function Immersive() {
         far: 1000,
       }}
     >
-      <ScrollControls horizontal>
-        <ambientLight position={[0, 0, 0]} intensity={0.04} />
-        <pointLight position={[-22, 0, 0]} intensity={2.2} scale={5} />
-        <Sun />
-        {Object.keys(planets).map((planet) => (
-          <Planets
-            key={planet}
-            planet={planet}
-            name={planets[planet].name}
-            texture={planets[planet].texture}
-            posX={planets[planet].posX}
-            cshadow={planets[planet].cshadow}
-            rshadow={planets[planet].rshadow}
-            spinspeed={planets[planet].spinSpeed}
-          />
-        ))}
-      </ScrollControls>
+      <ambientLight position={[0, 0, 0]} intensity={0.04} />
+      <pointLight position={[-22, 0, 0]} intensity={2.2} scale={5} />
+      <Sun />
+      {Object.keys(planets).map((planet) => (
+        <Planets
+          key={planet}
+          planet={planet}
+          name={planets[planet].name}
+          texture={planets[planet].texture}
+          posX={planets[planet].posX}
+          cshadow={planets[planet].cshadow}
+          rshadow={planets[planet].rshadow}
+          spinspeed={planets[planet].spinSpeed}
+        />
+      ))}
     </Canvas>
   );
 }
