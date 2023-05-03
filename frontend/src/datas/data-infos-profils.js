@@ -19,7 +19,7 @@ const profils = [
       "Damien est un pilote spatial expérimenté travaillant pour SpaceMX. Avec plus de 15 ans d'expérience, il est connu pour son habileté à piloter les véhicules spatiaux dans des situations difficiles. Passionné d'astronomie et de sciences spatiales, Damien travaille en étroite collaboration avec les ingénieurs et scientifiques pour s'assurer que les missions sont exécutées avec succès et en toute sécurité.",
     linkedin: "https://www.linkedin.com/in/damien-a-5a303660/",
     github: "https://github.com/Zanelidd",
-    mail: "",
+    mail: "damien.arnaudpro@gmail.com",
   },
   {
     id: 3,
@@ -28,9 +28,9 @@ const profils = [
     title: "Astronome",
     description:
       "Jean-Baptiste est un astronome expérimenté travaillant pour SpaceMX. Avec plus de 10 ans d'expérience dans le domaine de l'astronomie, il est spécialisé dans l'étude des corps célestes, notamment des planètes, des étoiles et des galaxies. En tant que membre de l'équipe scientifique de SpaceMX, Jean-Baptiste est responsable de la conception et de la mise en œuvre des missions scientifiques de l'entreprise. Il travaille en étroite collaboration avec les ingénieurs et les pilotes spatiaux pour s'assurer que les missions sont réalisées avec succès. Jean-Baptiste est également impliqué dans l'analyse des données recueillies lors des missions spatiales de l'entreprise, en utilisant des techniques d'imagerie et de spectroscopie pour en apprendre davantage sur l'univers qui nous entoure.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jean-baptiste-noiraud-45988226b/",
     github: "https://github.com/jbaptiste51",
-    mail: "",
+    mail: "jean.noiraud@gmail.com",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const profils = [
       "Victor est un ingénieur spatial expérimenté travaillant pour SpaceMX. Avec plus de 10 ans d'expérience dans le domaine de l'aérospatiale, il est spécialisé dans la conception et la construction de véhicules spatiaux. En tant que membre de l'équipe d'ingénierie de SpaceMX, Victor est responsable de la planification et de la mise en œuvre des projets de conception et de développement de nouveaux véhicules spatiaux. Il travaille en étroite collaboration avec les pilotes spatiaux, les scientifiques et les autres membres de l'équipe pour s'assurer que les véhicules spatiaux répondent aux exigences spécifiques de chaque mission. Victor est également impliqué dans la maintenance et la mise à niveau des véhicules spatiaux existants pour garantir leur efficacité et leur sécurité.",
     linkedin: "https://www.linkedin.com/in/victor-brito-69040a191",
     github: "https://github.com/webdevbynight",
-    mail: "",
+    mail: "contact@victor-brito.name",
   },
 ];
 
