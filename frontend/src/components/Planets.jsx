@@ -39,7 +39,6 @@ function Planets({ planet, name, texture, posX, cshadow, rshadow, spinspeed }) {
       <Text
         color="white"
         textAlign="center"
-        font="Mina"
         fontSize="0.4"
         anchorX={-posX + 0.5}
         anchorY={1.6}
