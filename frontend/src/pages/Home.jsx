@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,6 +10,12 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth >= 1280) {
+      setToggle(true);
+    }
+  }, []);
 
   return (
     <>

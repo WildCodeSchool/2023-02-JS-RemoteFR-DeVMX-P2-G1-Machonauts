@@ -261,13 +261,14 @@
 
 .switch-immersive {
   display: none;
-  background-color: white;
-  height: 4rem;
-  width: 20rem;
+  background-color: rgba(255, 255, 255, 0.375);
+  height: 3rem;
+  width: 10rem;
   border-radius: 10px;
   position: absolute;
-  top: 75vh;
-  left: 45vw;
+  z-index: 2;
+  top: 4vh;
+  right: 2vw;
   font-size: var(--input-size);
   @media screen and (min-width: 1280px){
     display: block;

@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Planet from "./pages/Planet";
-import About from "./pages/About";
+import AboutUs from "./pages/About";
 import Contact from "./pages/Contact";
 import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
+import Immersive from "./pages/Immersive";
 import ParticleBackground from "./components/ParticleBackground";
 import "./styles.scss";
 
@@ -18,8 +19,9 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/planet/:planet" element={<Planet />} />
           <Route path="/rockets" element={<Rockets />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/a-propos" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/home-immersive" element={<Immersive />} />
         </Routes>
       </BrowserRouter>
     </div>
