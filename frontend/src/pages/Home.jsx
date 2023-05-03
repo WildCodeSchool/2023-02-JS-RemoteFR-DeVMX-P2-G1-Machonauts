@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import rocket from "../assets/rocket-logo.webp";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const navigate = useNavigate();
+  function immersive() {
+    navigate("/home-immersive");
+  }
 
   return (
     <>
@@ -127,6 +132,9 @@ function Home() {
         onClick={() => setIsVisible(!isVisible)}
       >
         {" "}
+      </button>
+      <button type="button" className="switch-immersive" onClick={immersive}>
+        Click here to begin a new journey !
       </button>
       <Footer />
     </>
