@@ -8,7 +8,7 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [changeClass, setChangeClass] = useState("send-form-off");
-  const disable = document.getElementById("button_contact");
+  const disable = document.getElementById("button_Contact");
 
   function submit(e) {
     e.preventDefault();
