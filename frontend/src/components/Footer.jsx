@@ -4,12 +4,10 @@ function Footer() {
   return (
     <footer className="footer">
       <Link to="../a-propos" className="animate-text">
-        {" "}
-        A propos{" "}
+        A propos
       </Link>
       <Link to="../contact" className="animate-text">
-        {" "}
-        Contact{" "}
+        Contact
       </Link>
     </footer>
   );
