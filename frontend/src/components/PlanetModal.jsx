@@ -5,13 +5,13 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { OrbitControls } from "@react-three/drei";
 
-function PlanetModal({ texture }) {
+function PlanetModal({ texture, spinspeed }) {
   const planetRef = useRef();
   const textureMap = useLoader(TextureLoader, texture);
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
-    planetRef.current.rotation.y = elapsedTime / 6;
+    planetRef.current.rotation.y = elapsedTime * spinspeed * 90;
   });
   return (
     <>
@@ -32,5 +32,6 @@ function PlanetModal({ texture }) {
 }
 PlanetModal.propTypes = {
   texture: PropTypes.string.isRequired,
+  spinspeed: PropTypes.number.isRequired,
 };
 export default PlanetModal;

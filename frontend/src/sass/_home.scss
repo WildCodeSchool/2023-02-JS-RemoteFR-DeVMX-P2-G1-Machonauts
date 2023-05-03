@@ -261,7 +261,11 @@
 
 .switch-immersive {
   display: none;
-  background-color: rgba(255, 255, 255, 0.375);
+  // box-shadow: 0 4px 25px 11px rgba(88, 76, 221, 0.25),
+  // inset 0 4px 20px 10px rgba(88, 76, 221, 0.35);
+  color:var(--primary-colour);
+  border:none;
+  text-align: center;
   height: 3rem;
   width: 10rem;
   border-radius: 10px;

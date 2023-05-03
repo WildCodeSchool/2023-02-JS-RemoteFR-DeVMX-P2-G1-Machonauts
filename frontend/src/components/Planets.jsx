@@ -7,7 +7,7 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import EarthClouds from "./EarthClouds";
 
-function Planets({ planet, name, texture, posX, cshadow, rshadow }) {
+function Planets({ planet, name, texture, posX, cshadow, rshadow, spinspeed }) {
   const planetsMesh = useRef();
   const texturePlanet = useLoader(TextureLoader, texture);
   const navigate = useNavigate();
@@ -18,8 +18,7 @@ function Planets({ planet, name, texture, posX, cshadow, rshadow }) {
   useFrame(({ clock }) => {
     if (planetsMesh.current) {
       const elapsedTime = clock.getElapsedTime();
-      planetsMesh.current.rotation.y = elapsedTime / 6;
-      planetsMesh.current.rotation.z = 0.4;
+      planetsMesh.current.rotation.y = elapsedTime * spinspeed * 90;
     }
   });
 
@@ -33,13 +32,14 @@ function Planets({ planet, name, texture, posX, cshadow, rshadow }) {
         position={[posX, 0, 0]}
         onClick={planetLink}
       >
-        <sphereGeometry attach="geometry" args={[1, 32, 32]} rotateY={0.4} />
+        <sphereGeometry attach="geometry" args={[1, 32, 32]} />
         <meshPhongMaterial attach="material" map={texturePlanet} />
         {name === "Terre" && <EarthClouds />}
       </mesh>
       <Text
         color="white"
         textAlign="center"
+        font="Mina"
         fontSize="0.4"
         anchorX={-posX + 0.5}
         anchorY={1.6}
@@ -56,5 +56,6 @@ Planets.propTypes = {
   posX: PropTypes.number.isRequired,
   cshadow: PropTypes.bool.isRequired,
   rshadow: PropTypes.bool.isRequired,
+  spinspeed: PropTypes.number.isRequired,
 };
 export default Planets;
