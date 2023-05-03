@@ -1,15 +1,15 @@
-.header-container{
-    height: 8rem;
-    display: flex;
-    justify-content: left;
+.header-container {
+  height: 8rem;
+  display: flex;
+  justify-content: left;
 
-    img{
-        height: 100%;
-    }
+  img {
+    height: 100%;
+  }
 }
 
-@media screen and (min-width:600px) {
-    .header-container{
-        height: 15rem;
-    }
+@media screen and (min-width: 600px) {
+  .header-container {
+    height: 15rem;
+  }
 }

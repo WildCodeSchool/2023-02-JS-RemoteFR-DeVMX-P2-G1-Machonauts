@@ -3,18 +3,18 @@
 /* Font */
 
 @font-face {
-    font-family: Mina;
-    src: url("/src/assets/fonts/Mina-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: Mina;
+  src: url("/src/assets/fonts/Mina-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: Mina;
-    src: url("/src/assets/fonts/Mina-Bold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
+  font-family: Mina;
+  src: url("/src/assets/fonts/Mina-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
-    font-family: Mina, sans-serif;
+  font-family: Mina, sans-serif;
 }

@@ -25,7 +25,7 @@ function Planet() {
     return Math.round(number - 273.15);
   };
   const planetName = planets[planet].name;
-  const planeTexture = planets[planet].Texture;
+  const planeTexture = planets[planet].texture;
   const planetDescription = planets[planet].description;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
   const [characteristics, setCharacteristics] = useState({});
@@ -75,7 +75,7 @@ function Planet() {
           >
             <ambientLight intensity={0.4} />
             <pointLight position={[-50, 30, 60]} intensity={2} />
-            <PlanetModal name={planetName} Texture={planeTexture} />
+            <PlanetModal name={planetName} texture={planeTexture} />
             {planetName === "Terre" && <EarthClouds />}
           </Canvas>
           <h1>{planetName}</h1>
@@ -88,19 +88,19 @@ function Planet() {
               <dl>
                 <dt>Demi-grand axe</dt>
                 <dd>
-                  {displayNumber(characteristics.semimajorAxis)}&nbsp;km{" "}
+                  {displayNumber(characteristics.semimajorAxis)}&nbsp;km
                   <span>
                     ({getAuFromKm(characteristics.semimajorAxis)}&nbsp;au)
                   </span>
                 </dd>
                 <dt>Aphélie</dt>
                 <dd>
-                  {displayNumber(characteristics.aphelion)}&nbsp;km{" "}
+                  {displayNumber(characteristics.aphelion)}&nbsp;km
                   <span>({getAuFromKm(characteristics.aphelion)}&nbsp;au)</span>
                 </dd>
                 <dt>Périhélie</dt>
                 <dd>
-                  {displayNumber(characteristics.perihelion)}&nbsp;km{" "}
+                  {displayNumber(characteristics.perihelion)}&nbsp;km
                   <span>
                     ({getAuFromKm(characteristics.perihelion)}&nbsp;au)
                   </span>
@@ -163,7 +163,7 @@ function Planet() {
                     <span>(rétrograde)</span>
                   )}
                 </dd>
-                <dt>Inclinaison de l’axe</dt>
+                <dt>Inclinaison de l'axe</dt>
                 <dd>{displayNumber(characteristics.axialTilt)}°</dd>
                 <dt>
                   Température de surface <span>(à 100&nbsp;kPa)</span>
