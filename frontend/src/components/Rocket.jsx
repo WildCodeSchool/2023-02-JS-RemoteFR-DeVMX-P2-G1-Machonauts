@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from "prop-types";
+
 function Rocket({ src, description, name, alt }) {
   return (
     <div className="rocket-container">
@@ -10,5 +11,11 @@ function Rocket({ src, description, name, alt }) {
     </div>
   );
 }
+Rocket.propTypes = {
+  src: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  alt: PropTypes.number.isRequired,
+};
 
 export default Rocket;
