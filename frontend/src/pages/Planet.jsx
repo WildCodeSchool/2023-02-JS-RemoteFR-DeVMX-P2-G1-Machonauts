@@ -27,6 +27,7 @@ function Planet() {
   const planetName = planets[planet].name;
   const planeTexture = planets[planet].texture;
   const planetDescription = planets[planet].description;
+  const planetSpin = planets[planet].spinSpeed;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
   const [characteristics, setCharacteristics] = useState({});
   const [images, setImages] = useState([]);
@@ -75,7 +76,11 @@ function Planet() {
           >
             <ambientLight intensity={0.4} />
             <pointLight position={[-50, 30, 60]} intensity={2} />
-            <PlanetModal name={planetName} texture={planeTexture} />
+            <PlanetModal
+              name={planetName}
+              texture={planeTexture}
+              spinspeed={planetSpin}
+            />
             {planetName === "Terre" && <EarthClouds />}
           </Canvas>
           <h1>{planetName}</h1>
