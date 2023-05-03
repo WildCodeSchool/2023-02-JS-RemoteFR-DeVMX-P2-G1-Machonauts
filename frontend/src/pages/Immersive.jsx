@@ -12,7 +12,7 @@ function Immersive() {
 
   useEffect(() => {
     if (window.innerWidth >= 1920) {
-      setZoom();
+      setZoom(65);
     } else if (window.innerWidth > 1200 && window.innerWidth < 1920) {
       setZoom(45);
     } else if (window.innerWidth >= 1024 && window.innerWidth <= 1200) {
