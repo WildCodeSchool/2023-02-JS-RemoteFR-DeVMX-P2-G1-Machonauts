@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -7,22 +8,8 @@ import Immersive from "./Immersive";
 import rocket from "../assets/rocket-logo.webp";
 import MobileImmersive from "./MobileImmersive";
 
-function Home() {
+function Home({ toggle, toggle2 }) {
   const [isVisible, setIsVisible] = useState(false);
-
-  const [toggle, setToggle] = useState(false);
-  const [toggle2, setToggle2] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth >= 1280) {
-      setToggle(true);
-    }
-  }, []);
-  useEffect(() => {
-    if (window.innerWidth < 1280) {
-      setToggle2(true);
-    }
-  }, []);
 
   return (
     <>
@@ -52,23 +39,15 @@ function Home() {
       >
         {" "}
       </button>
-      <button
-        type="button"
-        className="switch-immersive"
-        onClick={() => setToggle(!toggle)}
-      >
-        2D / 3D
-      </button>
-      <button
-        type="button"
-        className="switch-immersive-mobile"
-        onClick={() => setToggle2(!toggle2)}
-      >
-        2D / 3D
-      </button>
+
       <Footer />
     </>
   );
 }
+
+Home.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+  toggle2: PropTypes.bool.isRequired,
+};
 
 export default Home;
