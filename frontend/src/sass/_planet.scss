@@ -129,7 +129,7 @@ $planet-colours: (
       width: 50vw;
     }
   }
-  @media (min-width: 860px) {
+  @media (min-width: 1060px) {
     font-size: var(--paragraph-size-desktop);
     display: grid;
     grid-template: repeat(5, auto) / 27rem repeat(2, 1fr);
