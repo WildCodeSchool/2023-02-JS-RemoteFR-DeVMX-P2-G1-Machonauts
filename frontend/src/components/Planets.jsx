@@ -7,7 +7,16 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import EarthClouds from "./EarthClouds";
 
-function Planets({ planet, name, texture, posX, cshadow, rshadow, spinspeed }) {
+function Planets({
+  planet,
+  name,
+  texture,
+  posX,
+  cshadow,
+  rshadow,
+  spinspeed,
+  posText,
+}) {
   const planetsMesh = useRef();
   const texturePlanet = useLoader(TextureLoader, texture);
   const navigate = useNavigate();
@@ -40,7 +49,7 @@ function Planets({ planet, name, texture, posX, cshadow, rshadow, spinspeed }) {
         color="white"
         textAlign="center"
         fontSize="0.4"
-        anchorX={-posX + 0.5}
+        anchorX={-posX + posText}
         anchorY={1.6}
       >
         {name}
@@ -53,6 +62,7 @@ Planets.propTypes = {
   name: PropTypes.string.isRequired,
   texture: PropTypes.string.isRequired,
   posX: PropTypes.number.isRequired,
+  posText: PropTypes.number.isRequired,
   cshadow: PropTypes.bool.isRequired,
   rshadow: PropTypes.bool.isRequired,
   spinspeed: PropTypes.number.isRequired,
