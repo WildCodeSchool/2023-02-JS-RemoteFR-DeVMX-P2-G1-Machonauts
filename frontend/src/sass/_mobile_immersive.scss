@@ -23,16 +23,9 @@
         min-height: 68vh;
         column-gap: 0;
         grid-template: repeat(2, auto) / repeat(4, 1fr);
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        // align-items: center;
-        // align-self: center;
-        // width: 80rem;
-        // height: 80vh;
-        .container-mobile{
-          width: 16rem;
-          height: 16rem;
+          .container-mobile{
+          width: 15rem;
+          height: 15rem;
 
           h1{
             font-size: 2.7rem;
