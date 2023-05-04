@@ -7,6 +7,8 @@ import Home2D from "../components/Home2D";
 import Immersive from "./Immersive";
 import rocket from "../assets/rocket-logo.webp";
 import MobileImmersive from "./MobileImmersive";
+import astronaut from "../assets/astronaut.svg";
+import astronautHead from "../assets/astronaut-head.png";
 
 function Home({ toggle, toggle2 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,8 +30,8 @@ function Home({ toggle, toggle2 }) {
 
       {isVisible && (
         <div className="astronaut">
-          <img src="../src/assets/astronaut.svg" alt="" />
-          <img src="../src/assets/astronaut-head.png" alt="" />
+          <img src={astronaut} alt="" />
+          <img src={astronautHead} alt="" />
         </div>
       )}
       <button
