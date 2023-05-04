@@ -2,10 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
+    margin-bottom: 4rem;
     .container-mobile{
       width: 27rem;
       height: 27rem;
+      cursor: pointer;
 
       h1{
         color:var(--primary-colour);
