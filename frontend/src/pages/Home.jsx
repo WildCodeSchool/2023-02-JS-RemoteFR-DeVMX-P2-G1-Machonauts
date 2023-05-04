@@ -5,15 +5,22 @@ import Footer from "../components/Footer";
 import Home2D from "../components/Home2D";
 import Immersive from "./Immersive";
 import rocket from "../assets/rocket-logo.webp";
+import MobileImmersive from "./MobileImmersive";
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   const [toggle, setToggle] = useState(false);
+  const [toggle2, setToggle2] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth >= 1280) {
       setToggle(true);
+    }
+  }, []);
+  useEffect(() => {
+    if (window.innerWidth < 1280) {
+      setToggle2(true);
     }
   }, []);
 
@@ -27,8 +34,9 @@ function Home() {
             <img className="rocket-img" src={rocket} alt="rocket-draw" />
           </Link>
         </div>
-        {toggle && <Immersive />}
-        {!toggle && <Home2D />}
+        {toggle && !toggle2 && <Immersive />}
+        {!toggle && !toggle2 && <Home2D />}
+        {toggle2 && !toggle && <MobileImmersive />}
       </div>
 
       {isVisible && (
@@ -48,6 +56,13 @@ function Home() {
         type="button"
         className="switch-immersive"
         onClick={() => setToggle(!toggle)}
+      >
+        2D / 3D
+      </button>
+      <button
+        type="button"
+        className="switch-immersive-mobile"
+        onClick={() => setToggle2(!toggle2)}
       >
         2D / 3D
       </button>
