@@ -1,0 +1,45 @@
+.container-mobile-global{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    .container-mobile{
+      width: 27rem;
+      height: 27rem;
+
+      h1{
+        color:var(--primary-colour);
+        font-size: 2.7rem;
+        text-align: center;
+      }
+    }
+    
+    }
+    @media screen and (min-width:600px) {
+      .container-mobile-global{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        min-height: 68vh;
+        column-gap: 0;
+        grid-template: repeat(2, auto) / repeat(4, 1fr);
+          .container-mobile{
+          width: 15rem;
+          height: 15rem;
+
+          h1{
+            font-size: 2.7rem;
+          }
+        }
+        }
+    }
+    @media screen and (min-width:1280px) {
+      .container-mobile-global{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;   
+        }
+    }
+    

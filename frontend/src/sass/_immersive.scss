@@ -1,0 +1,18 @@
+.immersive {
+  height: 80vh;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  @media screen and (max-width:1280px) {
+    margin-top: 3rem;
+    
+  }
+
+  canvas{
+    height: 70vh;
+    scroll-behavior: auto;
+    @media screen and (max-width:1280px) {
+      height: 65vh;
+      
+    }
+  }
+}

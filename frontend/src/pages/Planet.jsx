@@ -1,8 +1,12 @@
+/* eslint-disable react/no-unknown-property */
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import PlanetModal from "../components/PlanetModal";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import planets from "../datas/planets";
+import EarthClouds from "../components/EarthClouds";
 
 function Planet() {
   const { planet } = useParams();
@@ -21,7 +25,9 @@ function Planet() {
     return Math.round(number - 273.15);
   };
   const planetName = planets[planet].name;
+  const planeTexture = planets[planet].texture;
   const planetDescription = planets[planet].description;
+  const planetSpin = planets[planet].spinSpeed;
   const [currentPlanet, setCurrentPlanet] = useState(planet);
   const [characteristics, setCharacteristics] = useState({});
   const [images, setImages] = useState([]);
@@ -56,17 +62,29 @@ function Planet() {
   return (
     <>
       <Header />
+
       <article className={`planet ${planet}`}>
-        <h1>
-          <img
-            src={`/src/assets/planets-surface/${planet}.jpg`}
-            alt=""
-            width="330"
-            height="330"
-          />
-          {}
-          {planetName}
-        </h1>
+        <div className="planets">
+          <Canvas
+            camera={{
+              zoom: 38,
+              position: [0, 10, 50],
+              fov: 76,
+              near: 0.1,
+              far: 1000,
+            }}
+          >
+            <ambientLight intensity={0.4} />
+            <pointLight position={[-50, 30, 60]} intensity={2} />
+            <PlanetModal
+              name={planetName}
+              texture={planeTexture}
+              spinspeed={planetSpin}
+            />
+            {planetName === "Terre" && <EarthClouds />}
+          </Canvas>
+          <h1>{planetName}</h1>
+        </div>
         <p>{planetDescription}</p>
         {Object.keys(characteristics).length && (
           <>
@@ -75,19 +93,19 @@ function Planet() {
               <dl>
                 <dt>Demi-grand axe</dt>
                 <dd>
-                  {displayNumber(characteristics.semimajorAxis)}&nbsp;km{" "}
+                  {displayNumber(characteristics.semimajorAxis)}&nbsp;km
                   <span>
                     ({getAuFromKm(characteristics.semimajorAxis)}&nbsp;au)
                   </span>
                 </dd>
                 <dt>Aphélie</dt>
                 <dd>
-                  {displayNumber(characteristics.aphelion)}&nbsp;km{" "}
+                  {displayNumber(characteristics.aphelion)}&nbsp;km
                   <span>({getAuFromKm(characteristics.aphelion)}&nbsp;au)</span>
                 </dd>
                 <dt>Périhélie</dt>
                 <dd>
-                  {displayNumber(characteristics.perihelion)}&nbsp;km{" "}
+                  {displayNumber(characteristics.perihelion)}&nbsp;km
                   <span>
                     ({getAuFromKm(characteristics.perihelion)}&nbsp;au)
                   </span>
@@ -150,7 +168,7 @@ function Planet() {
                     <span>(rétrograde)</span>
                   )}
                 </dd>
-                <dt>Inclinaison de l’axe</dt>
+                <dt>Inclinaison de l'axe</dt>
                 <dd>{displayNumber(characteristics.axialTilt)}°</dd>
                 <dt>
                   Température de surface <span>(à 100&nbsp;kPa)</span>
