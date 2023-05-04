@@ -5,7 +5,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Rockets from "./pages/Rockets";
 import Welcome from "./pages/Welcome";
-import Immersive from "./pages/Immersive";
 import ParticleBackground from "./components/ParticleBackground";
 import "./styles.scss";
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/rockets" element={<Rockets />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/home-immersive" element={<Immersive />} />
         </Routes>
       </BrowserRouter>
     </div>
