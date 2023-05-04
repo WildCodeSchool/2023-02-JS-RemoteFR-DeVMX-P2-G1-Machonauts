@@ -130,8 +130,8 @@
 
     .planet-img {
       border-radius: 50%;
-      height: 10rem;
-      width: 10rem;
+      height: 16rem;
+      width: 16rem;
       box-shadow: 1px 2px 5px #d6d2d2;
       display: block;
       margin: 0 auto;
@@ -277,4 +277,24 @@
   @media screen and (min-width: 1280px){
     display: block;
   }
+}
+.switch-immersive-mobile{
+display: block;
+// box-shadow: 0 4px 25px 11px rgba(88, 76, 221, 0.25),
+// inset 0 4px 20px 10px rgba(88, 76, 221, 0.35);
+color:var(--primary-colour);
+border:none;
+text-align: center;
+height: 3rem;
+width: 10rem;
+border-radius: 10px;
+position: absolute;
+top: 4vh;
+right: 2vh;
+z-index: 2;
+
+font-size: var(--input-size);
+@media screen and (min-width: 1280px){
+  display: none;
+}
 }
