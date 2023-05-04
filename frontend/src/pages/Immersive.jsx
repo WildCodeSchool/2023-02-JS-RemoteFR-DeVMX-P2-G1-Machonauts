@@ -43,6 +43,7 @@ function Immersive() {
           name={planets[planet].name}
           texture={planets[planet].texture}
           posX={planets[planet].posX}
+          posText={planets[planet].posText}
           cshadow={planets[planet].cshadow}
           rshadow={planets[planet].rshadow}
           spinspeed={planets[planet].spinSpeed}
