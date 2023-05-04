@@ -20,8 +20,7 @@ function EarthClouds() {
       <sphereGeometry args={[1.008, 32, 32]} attach="geometry" />
       <meshPhongMaterial
         alphaMap={clouds}
-        // eslint-disable-next-line react/jsx-boolean-value
-        transparent={true}
+        transparent
         attach="material"
         side={DoubleSide}
       />

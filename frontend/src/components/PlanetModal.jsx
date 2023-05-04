@@ -21,8 +21,7 @@ function PlanetModal({ texture, spinspeed }) {
         <meshLambertMaterial map={textureMap} />
         <OrbitControls
           rotateSpeed={0.4}
-          // eslint-disable-next-line react/jsx-boolean-value
-          enableRotate={true}
+          enableRotate
           enableZoom={false}
           minZoom={100}
         />
