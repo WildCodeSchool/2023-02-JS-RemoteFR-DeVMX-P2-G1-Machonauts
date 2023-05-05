@@ -13,10 +13,10 @@ function Immersive() {
       setZoom(75);
     } else if (window.innerWidth >= 1920 && window.innerWidth < 2560) {
       setZoom(65);
-    } else if (window.innerWidth > 1280 && window.innerWidth < 1920) {
+    } else if (window.innerWidth >= 1480 && window.innerWidth <= 1920) {
       setZoom(50);
-    } else if (window.innerWidth >= 1024 && window.innerWidth <= 1280) {
-      setZoom(38);
+    } else if (window.innerWidth >= 1280 && window.innerWidth < 1480) {
+      setZoom(43);
     }
   }, []);
 
@@ -43,6 +43,7 @@ function Immersive() {
           name={planets[planet].name}
           texture={planets[planet].texture}
           posX={planets[planet].posX}
+          posText={planets[planet].posText}
           cshadow={planets[planet].cshadow}
           rshadow={planets[planet].rshadow}
           spinspeed={planets[planet].spinSpeed}
