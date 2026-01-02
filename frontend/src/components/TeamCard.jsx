@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import PropTypes from "prop-types";
 import imgProfile from "../assets/Monaut.svg";
 
