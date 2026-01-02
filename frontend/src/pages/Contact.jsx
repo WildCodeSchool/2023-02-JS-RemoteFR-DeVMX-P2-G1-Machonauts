@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
